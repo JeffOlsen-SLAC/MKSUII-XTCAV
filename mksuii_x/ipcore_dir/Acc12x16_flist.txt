@@ -1,0 +1,14 @@
+# Output products list for <Acc12x16>
+Acc12x16.asy
+Acc12x16.gise
+Acc12x16.ngc
+Acc12x16.v
+Acc12x16.veo
+Acc12x16.vhd
+Acc12x16.vho
+Acc12x16.xco
+Acc12x16.xise
+Acc12x16_flist.txt
+Acc12x16_readme.txt
+Acc12x16_xmdf.tcl
+_xmsgs\pn_parser.xmsgs

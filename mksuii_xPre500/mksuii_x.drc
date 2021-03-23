@@ -1,0 +1,65 @@
+Release 13.2 Drc O.61xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Thu Jun 20 13:02:02 2013
+
+drc -z mksuii_x.ncd mksuii_x.pcf
+
+WARNING:PhysDesignRules:1841 - One or more GTPs are being used in this design.
+   Evaluate the SelectIO-To-GTP Crosstalk section of the Virtex-5 RocketIO GTP
+   Transceiver User Guide to ensure that the design SelectIO usage meets the
+   guidelines to minimize the impact on GTP performance. 
+WARNING:PhysDesignRules:367 - The signal <POT2_UP_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <POT2_DOWN_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <N_POT1_SW_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <N_POT2_SW_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mem_WAIT_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <TEMP_ADC_CLK_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <N_SPI_SBUF_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <N_MONADC_EOC_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <N_SLOWADC_EOC_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <RFATTN_SDIN_IBUF> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:1441 - Issue with pin connections and/or configuration
+   on block:<u_FastADC/u_ad9228/u_FrameClkIn/BEAM_Viddr>:<ILOGIC_IFF>.  The
+   IFFTYPE is DDR and the Q2 output pin of IFF is not used.
+WARNING:PhysDesignRules:1275 - Issue with pin connections and/or configuration
+   on block:<u_FastADC/u_ad9228/u_FrameClkIn/BEAM_Viddr>:<ILOGIC_IFF>.  The SR
+   pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset value is not
+   configured.
+WARNING:PhysDesignRules:1412 - Issue with pin connections and/or configuration
+   on
+   block:<u_FastADC/u_ad9228/u_BeamVIn/BeamVibufds_IODELAY>:<IODELAY_IODELAY>. 
+   When DELAY_SRC is not DATAIN programming the DATAIN input pin is not used and
+   will be ignored.
+WARNING:PhysDesignRules:1412 - Issue with pin connections and/or configuration
+   on
+   block:<u_FastADC/u_ad9228/u_FrameClkIn/BeamVibufds_IODELAY>:<IODELAY_IODELAY>
+   .  When DELAY_SRC is not DATAIN programming the DATAIN input pin is not used
+   and will be ignored.
+WARNING:PhysDesignRules:1412 - Issue with pin connections and/or configuration
+   on
+   block:<u_FastADC/u_ad9228/u_BeamIIn/BeamVibufds_IODELAY>:<IODELAY_IODELAY>. 
+   When DELAY_SRC is not DATAIN programming the DATAIN input pin is not used and
+   will be ignored.
+WARNING:PhysDesignRules:1412 - Issue with pin connections and/or configuration
+   on
+   block:<u_FastADC/u_ad9228/u_FwdPwrIn/BeamVibufds_IODELAY>:<IODELAY_IODELAY>. 
+   When DELAY_SRC is not DATAIN programming the DATAIN input pin is not used and
+   will be ignored.
+WARNING:PhysDesignRules:1412 - Issue with pin connections and/or configuration
+   on
+   block:<u_FastADC/u_ad9228/u_ReflPwrIn/BeamVibufds_IODELAY>:<IODELAY_IODELAY>.
+    When DELAY_SRC is not DATAIN programming the DATAIN input pin is not used
+   and will be ignored.
+DRC detected 0 errors and 18 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

@@ -1,0 +1,48 @@
+##############################################################
+##############################################################
+##############################################################
+SET addpads = false
+SET asysymbol = true
+SET createndf = false
+SET formalverification = false
+SET foundationsym = false
+SET implementationfiletype = Ngc
+SET removerpms = false
+SET simulationfiles = Behavioral
+SET workingdirectory = ./tmp/
+SET designentry = VHDL
+SET BusFormat = BusFormatAngleBracketNotRipped
+SET devicefamily = virtex5
+SET device = xc5vlx30t
+SET package = ff665
+SET speedgrade = -1
+SET FlowVendor = Foundation_ISE
+SET VerilogSim = True
+SET VHDLSim = True
+SELECT Adder_Subtracter family Xilinx,_Inc. 11.0
+CSET a_type=Signed
+CSET a_width=16
+CSET add_mode=Add
+CSET ainit_value=0
+CSET b_constant=false
+CSET b_type=Signed
+CSET b_value=000000000000
+CSET b_width=12
+CSET borrow_sense=Active_Low
+CSET bypass=true
+CSET bypass_ce_priority=CE_Overrides_Bypass
+CSET bypass_sense=Active_High
+CSET c_in=false
+CSET c_out=false
+CSET ce=true
+CSET component_name=Acc12x16
+CSET implementation=DSP48
+CSET latency=1
+CSET latency_configuration=Manual
+CSET out_width=16
+CSET sclr=false
+CSET sinit=false
+CSET sinit_value=0
+CSET sset=false
+CSET sync_ce_priority=Sync_Overrides_CE
+CSET sync_ctrl_priority=Reset_Overrides_Set

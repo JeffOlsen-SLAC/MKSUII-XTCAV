@@ -1,0 +1,14 @@
+
+run
+-ifmt VHDL
+-ent Flash_Fifo_DPRam512x15_top 
+-p xc5vlx30t-ff665-1
+-ifn xst.prj
+-write_timing_constraints No
+-iobuf YES
+-max_fanout 100
+-ofn Flash_Fifo_DPRam512x15_top 
+-ofmt NGC
+-bus_delimiter ()
+-hierarchy_separator /
+-case Maintain

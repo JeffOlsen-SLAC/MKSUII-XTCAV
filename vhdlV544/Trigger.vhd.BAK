@@ -1,0 +1,446 @@
+-----------------------------------------------------------------
+--                                                             --
+-----------------------------------------------------------------
+--
+--	Trigger -
+--
+--	Copyright(c) SLAC 2000
+--
+--	Author: JEFF OLSEN
+--	Created on: 3/9/2011 2:32:34 PM
+--	Last change: JO 6/3/2013 8:32:06 AM
+--
+library IEEE;
+use IEEE.std_logic_1164.ALL;
+use IEEE.std_logic_ARITH.ALL;
+use IEEE.std_logic_UNSIGNED.ALL;
+
+library work;
+use work.mksuii.all;
+
+---- Uncomment the following library declaration if instantiating
+---- any Xilinx primitives in this code.
+library UNISIM;
+use UNISIM.VComponents.all;
+
+
+entity Trigger is
+Port (
+	Clock						: in std_logic;
+	Clk119Mhz				: in std_logic;
+	Reset 	  				: in std_logic;
+
+	AccTrig_p 				: in std_logic;
+	AccTrig_n 				: in std_logic;
+	StbyTrig_p 				: in std_logic;
+	StbyTrig_n 				: in std_logic;
+	
+	UseAccTrigger			: in std_logic;
+
+	SelfTriggerEn			: in std_logic;
+
+-- Link Interface
+	Lnk_Addr		 			: in std_logic_vector(15 downto 0);			-- From Link Interface
+	Lnk_Wr		 			: in std_logic;									-- From Link Interface
+	Lnk_DataIn				: in std_logic_vector(15 downto 0);			-- From Link Interface
+
+	Reg_DataOut				: out std_logic_vector(15 downto 0);
+
+	Clk100KHzEn				: in std_logic;
+	Local						: in std_logic;
+	LocalTrigDelay 		: in std_logic_vector(15 downto 0);
+	LocalRateDiv			: in std_logic_vector(2 downto 0);
+	TriggerEn				: in std_logic;								-- From EPIC's enable
+	TriggerDisable			: in std_logic;								-- From Fault Gen Trigger Disable
+	Mode_Maint				: in std_logic;
+
+	WFMTrigger				: out std_logic;
+	ModTrigger				: out std_logic;
+	RearTrigger				: out std_logic;
+	FrontTrigger			: out std_logic;
+
+	DisplayTrigDelay	 	: out std_logic_vector(15 downto 0);
+	
+	InputRate				: out std_logic_vector(15 downto 0);
+	OutputRate				: out std_logic_vector(15 downto 0);
+	
+	EventCounter				: out std_logic_vector(31 downto 0)
+
+	);
+
+end Trigger;
+
+architecture behaviour of Trigger is
+
+signal WFMTrigDelay		: std_logic_vector(15 downto 0);
+signal ModTrigDelay 		: std_logic_vector(15 downto 0);
+signal RearTrigDelay 	: std_logic_vector(15 downto 0);
+signal FrontTrigDelay 	: std_logic_vector(15 downto 0);
+signal TriggerDelay	 	: std_logic_vector(15 downto 0);
+signal RearTrigWidth	 	: std_logic_vector(15 downto 0);
+signal FrontTrigWidth	: std_logic_vector(15 downto 0);
+
+signal InRateCntr			: std_logic_vector(15 downto 0);
+signal OutRateCntr		: std_logic_vector(15 downto 0);
+signal OutRateDivCntr	: std_logic_vector(3 downto 0);
+signal OutRateDiv			: std_logic_vector(3 downto 0);
+signal iInputRate			: std_logic_vector(15 downto 0);
+signal iOutputRate		: std_logic_vector(15 downto 0);
+signal SelfTrigDel		: std_logic_vector(15 downto 0);
+signal SelfTrigCntr		: std_logic_vector(15 downto 0);
+signal SelfTrigger		: std_logic;
+signal SelfTrigSR			: std_logic_vector(1 downto 0);
+
+signal iTrig				: std_logic;
+signal TrigLe				: std_logic;
+signal DivTrig				: std_logic;
+signal iWFMTrigger		: std_logic;
+signal iModTrigger		: std_logic;
+signal iRearTrigger		: std_logic;
+signal iFrontTrigger		: std_logic;
+signal ModTrig				: std_logic;
+signal ACC_Trig			: std_logic;
+signal Stby_Trig			: std_logic;
+signal AccSyncSR			: std_logic_vector(2 downto 0);
+signal StndbySyncSr		: std_logic_vector(2 downto 0);
+signal iWFMTriggerSr		: std_logic_vector(2 downto 0);
+
+signal RemoteRateDiv 	: std_logic_vector(2 downto 0);
+signal iEventCounter 	: std_logic_vector(31 downto 0);
+signal ModulatorTrigger	: std_logic;
+
+signal iTrigSync 			:  std_logic;
+signal TrigLeSync 		:  std_logic;
+--
+
+constant RateDiv5	: std_logic_vector(3 downto 0) := x"C";
+constant RateDiv4	: std_logic_vector(3 downto 0) := x"6";
+constant RateDiv3	: std_logic_vector(3 downto 0) := x"4";
+constant RateDiv2	: std_logic_vector(3 downto 0) := x"3";
+constant RateDiv1	: std_logic_vector(3 downto 0) := x"2";
+constant RateDiv0	: std_logic_vector(3 downto 0) := x"1";
+
+
+begin
+
+DisplayTrigDelay 	<= TriggerDelay;
+EventCounter 		<= iEventCounter;
+
+InputRate 			<= iInputRate;
+OutputRate 			<= iOutputRate;
+
+u_AccTrig : IBUFDS
+port map (
+	I 	=> AccTrig_p,
+	IB => AccTrig_n,
+	O	=> ACC_Trig
+);
+
+u_StdbyTrig : IBUFDS
+port map (
+	I 	=> StbyTrig_p,
+	IB => StbyTrig_n,
+	O	=> STBY_Trig
+);
+
+-- jjo
+-- 4/23/13
+
+iRearTrigger		<= ACC_Trig when UseAccTrigger = '1' else STBY_Trig;
+iFrontTrigger		<= ACC_Trig when UseAccTrigger = '1' else STBY_Trig;
+
+RearTrigger 		<= iRearTrigger and TriggerEn;
+FrontTrigger 		<= iFrontTrigger and TriggerEn;
+
+ModTrigger	     	<= iModTrigger;
+--RearTrigger	     	<= iRearTrigger;
+--FrontTrigger     	<= iFrontTrigger;
+ModTrig				<= iTrig and TriggerEn;
+
+
+WFMTrigger 			<= iWFMTrigger;
+
+TrigCntr_p : process(Clk119Mhz, Reset)
+Begin
+if (Reset = '1') then
+	iEventCounter <= (Others => '0');
+elsif (Clock'event and Clock = '1') then
+	if (TrigLe = '1') then
+		iEventCounter <= iEventCounter + 1;
+	end if;
+end if;
+end process;
+
+Sync : process(Clock, Reset)
+Begin
+if (reset = '1') then
+	StndbySyncSr 	<= (Others => '0');
+	AccSyncSr 		<= (Others => '0');
+elsif (Clock'event and 	Clock = '1') then
+	StndBySyncSr	<= StndBySyncSr(1 downto 0) & STBY_Trig;
+	AccSyncSr		<= AccSyncSr(1 downto 0) & Acc_Trig;
+end if;
+end process;
+
+WrReg : process(Clock, Reset)
+Begin
+if (reset = '1') then
+	WFMTrigDelay	<=	(Others => '0');
+	ModTrigDelay   <=	(Others => '0');
+	RearTrigDelay	<=	(Others => '0');
+	RearTrigWidth	<=	(Others => '0');
+	FrontTrigDelay <=	(Others => '0');
+	FrontTrigWidth <=	(Others => '0');
+	SelfTrigDel 	<=	(Others => '0');
+elsif (Clock'event and 	Clock = '1') then
+	if (Lnk_Wr = '1') then
+		Case Lnk_Addr is
+			when x"0000" =>
+				WFMTrigDelay		<= Lnk_DataIn;
+			when x"0001" =>
+				ModTrigDelay		<= Lnk_DataIn;
+--			when x"0002" =>
+--				RearTrigDelay		<= Lnk_DataIn;
+--			when x"0003" =>
+--				RearTrigWidth 		<= Lnk_DataIn;
+--			when x"0004" =>
+--				FrontTrigDelay		<= Lnk_DataIn;
+--			when x"0005" =>
+--				FrontTrigWidth 	<= Lnk_DataIn;
+			when x"000A" => 
+				RemoteRateDiv		<= Lnk_DataIn(2 downto 0);
+			when x"000D" => 
+				SelfTrigDel			<= Lnk_DataIn;
+			when others =>
+		end case;
+	end if;
+end if;
+end process;
+
+TriggerDelay 	<= LocalTrigDelay when (Local = '1') else ModTrigDelay;
+iTrig				<= DivTrig when (Mode_Maint = '1') else TrigLe;
+
+ReadReg_p : process (Lnk_Addr, Local, WFMTrigDelay, ModTrigDelay, RearTrigDelay,
+						RearTrigWidth, FrontTrigDelay, FrontTrigWidth, LocalTrigDelay, 
+						TriggerDelay, iInputRate, iOutputRate, RemoteRateDiv,
+						LocalRateDiv, OutRateDiv, SelfTrigDel)
+Begin
+	Case Lnk_Addr(3 downto 0) is
+		when x"0" =>
+			Reg_DataOut <= WFMTrigDelay;
+		when x"1" =>
+			Reg_DataOut <= ModTrigDelay;
+		when x"2" =>
+			Reg_DataOut <= RearTrigDelay;
+		when x"3" =>
+			Reg_DataOut <= RearTrigWidth;
+		when x"4" =>
+			Reg_DataOut <= FrontTrigDelay;
+		when x"5" =>
+			Reg_DataOut <= FrontTrigWidth;
+		when x"6" =>
+			Reg_DataOut <= LocalTrigDelay;
+		when x"7" =>
+			Reg_DataOut <= TriggerDelay;
+		when x"8" =>
+			Reg_DataOut <= iInputRate;
+		when x"9" =>
+			Reg_DataOut <= iOutputRate;
+		when x"A" =>
+			Reg_DataOut	<= "0000000000000" & RemoteRateDiv;
+		when x"B" =>
+			Reg_DataOut	<= "0000000000000" & LocalRateDiv;
+		when x"C" =>
+			Reg_DataOut	<= x"000" & OutRateDiv;
+		when x"D" =>
+			Reg_DataOut	<= SelfTrigDel;
+		when others =>
+			Reg_DataOut <= (Others => '0');
+	end case;
+end process;
+
+RateMux_p : Process(LocalRateDiv, RemoteRateDiv, Local)
+begin
+if (Local = '1') then
+	case LocalRateDiv is
+		when "000" => OutRateDiv <=  RateDiv0;
+		when "001" => OutRateDiv <=  RateDiv1;
+		when "010" => OutRateDiv <=  RateDiv2;
+		when "011" => OutRateDiv <=  RateDiv3;
+		when "100" => OutRateDiv <=  RateDiv4;
+		when "101" => OutRateDiv <=  RateDiv5;
+		when others =>  OutRateDiv <=  RateDiv0;
+	end case;
+else
+	case RemoteRateDiv is
+		when "000" => OutRateDiv <=  RateDiv0;
+		when "001" => OutRateDiv <=  RateDiv1;
+		when "010" => OutRateDiv <=  RateDiv2;
+		when "011" => OutRateDiv <=  RateDiv3;
+		when "100" => OutRateDiv <=  RateDiv4;
+		when "101" => OutRateDiv <=  RateDiv5;
+		when others =>  OutRateDiv <=  RateDiv0;
+	end case;
+end if;
+end process;
+
+-- jjo 05/30/13
+-- Removed Self Trigger 
+	
+TrigLe_p : process(Clock, Reset)
+Begin
+if (reset = '1') then
+	TrigLe	<= '0';
+elsif (Clock'event and Clk119Mhz = '1') then
+	if (UseAccTrigger = '1') then
+		if (AccSyncSr(2 downto 1) = "01") then
+			TrigLe	<= '1';
+		else
+			TrigLe	<= '0';
+		end if;
+	else
+		if (StndBySyncSr(2 downto 1) = "01") then
+			TrigLe	<= '1';
+		else
+			TrigLe	<= '0';
+		end if;
+	end if;
+end if;
+end process;
+
+
+
+OutTrig_p : process(Clk119Mhz, Reset)
+begin
+if (reset = '1') then
+	DivTrig			<= '0';
+  	OutRateDivCntr	<= x"0";
+elsif (Clk119Mhz'event and Clk119Mhz = '1') then
+	if (TrigLe = '1') then
+		if (OutRateDivCntr = OutRateDiv) then
+			DivTrig 			<= '1';
+			OutRateDivCntr <= x"1";
+		else
+			OutRateDivCntr <= OutRateDivCntr + 1;
+		end if;
+	else
+		DivTrig <= '0';
+	end if;
+end if;
+end process;
+
+-- change Trigle from 119mhz to Clock
+
+u_TrigLESync : clk12clk2 
+Port map ( 
+	Clk1 	=> Clk119Mhz,
+	Reset	=> Reset,
+	Din 	=> TrigLe,
+	Clk2 	=> Clock,
+	Dout 	=> TrigLeSync
+);
+
+InRate_p : process(Clock, Reset)
+Begin
+if (reset = '1') then
+	InRateCntr 		<= (Others => '0');
+	iInputRate		<= (Others => '0');
+elsif (Clock'event and Clock = '1') then
+	if (TrigLeSync = '1') then
+		iInputRate	<= InRateCntr;
+		InRateCntr 	<= (Others => '0');
+	elsif (Clk100KHzEn = '1') then
+		if (InRateCntr /= x"FFFF") then
+			InRateCntr <= InRateCntr + 1;
+		end if;
+	end if;
+end if;
+end process;
+
+
+-- change iTrig from 119mhz to Clock
+
+u_iTrigSync : clk12clk2 
+Port map ( 
+	Clk1 	=> Clk119Mhz,
+	Reset	=> Reset,
+	Din 	=> iTrig,
+	Clk2 	=> Clock,
+	Dout 	=> iTrigSync
+);
+
+OutRate_p : process(Clock, Reset)
+Begin
+if (reset = '1') then
+	OutRateCntr 	<= (Others => '0');
+	iOutputRate		<=	(Others => '0');
+elsif (Clock'event and Clock = '1') then
+	if (iTrig = '1') then
+		iOutputRate		<=	OutRateCntr;
+		OutRateCntr 	<=	(Others => '0');
+	elsif (Clk100KHzEn = '1') then
+		if (OutRateCntr /= x"FFFF") then
+			OutRateCntr <= OutRateCntr +1;
+		end if;
+	end if;
+end if;
+end process;
+
+u_wfmTrig : prog_strobe16
+Port map (
+	Clock 			=> Clk119Mhz,
+	Reset 			=> Reset,
+	TriggerIn 		=> iTrig,
+	Delay  			=> WFMTrigDelay,
+	Width  			=> x"0004",
+	Pulse 			=> iWFMTrigger
+	);
+
+--u_ModTrig : pulse_delay16
+--Port map (
+--	Clock 			=> Clock,
+--	Reset 			=> Reset,
+--	TriggerIn 		=> ModTrigEnable,
+--	Delay  			=> TriggerDelay,
+--	Pulse 			=> iModTrigger
+--	);
+
+ModulatorTrigger <= ModTrig and Not(TriggerDisable);
+
+
+-- jjo 05/30/13
+-- Changed width bach to 1us
+-- Maybe went to 100us to test pulser, I don't remeber
+
+u_ModTrig : prog_strobe16
+Port map (
+	Clock 			=> Clk119Mhz,
+	Reset 			=> Reset,
+	TriggerIn 		=> ModulatorTrigger,
+	Delay  			=> TriggerDelay,
+	Width  			=> x"0076",   -- 1us at 119Mhz
+--	Width  			=> x"2e7c",   -- 100us at 119Mhz
+	Pulse 			=> iModTrigger
+	);
+	
+--u_RearTrig : prog_strobe16
+--Port map (
+--	Clock 			=> Clock,
+--	Reset 			=> Reset,
+--	TriggerIn 		=> ModTrig,
+--	Delay  			=> RearTrigDelay,
+--	Width  			=> RearTrigWidth,
+--	Pulse 			=> iRearTrigger
+--	);
+--
+--u_FronTrig : prog_strobe16
+--Port map (
+--	Clock 			=> Clock,
+--	Reset 			=> Reset,
+--	TriggerIn 		=> ModTrig,
+--	Delay  			=> FrontTrigDelay,
+--	Width  			=> FrontTrigWidth,
+--	Pulse 			=> iFrontTrigger
+--	);
+	
+end behaviour;

@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/FastADCIntf.xst" -ofn "V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/FastADCIntf.syr" 
+xst -intstyle ise -ifn "V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/FastADCIntf.xst" -ofn "V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/FastADCIntf.syr" 
+xst -intstyle ise -ifn "V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/FastADCIntf.xst" -ofn "V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/FastADCIntf.syr" 
+xst -intstyle ise -ifn "V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/FastADCIntf.xst" -ofn "V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/FastADCIntf.syr" 
+xst -intstyle ise -ifn "V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/FastADCIntf.xst" -ofn "V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/FastADCIntf.syr" 
+xst -intstyle ise -ifn "V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/FastADCIntf.xst" -ofn "V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/FastADCIntf.syr" 
+xst -intstyle ise -ifn "V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/FastADCIntf.xst" -ofn "V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/FastADCIntf.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mksuii_x.ucf -p xc5vlx30t-ff665-1 FastADCIntf.ngc FastADCIntf.ngd  

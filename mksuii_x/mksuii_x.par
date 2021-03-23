@@ -1,0 +1,358 @@
+Release 14.7 par P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+localhost.localdomain::  Mon Mar 22 17:32:17 2021
+
+par -w -intstyle ise -ol high -mt off mksuii_x_map.ncd mksuii_x.ncd
+mksuii_x.pcf 
+
+
+Constraints file: mksuii_x.pcf.
+Loading device for application Rf_Device from file '5vlx30t.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
+   "mksuii_x" is an NCD, version 3.2, device xc5vlx30t, package ff665, speed -1
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+INFO:Security:54 - 'xc5vlx30t' is a WebPack part.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue
+to function, but you no longer qualify for Xilinx software updates or new releases.
+
+----------------------------------------------------------------------
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 0.950 Volts. (default - Range: 0.950 to 1.050 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.73 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+   Number of BUFDSs                          1 out of 4      25%
+   Number of BUFGs                           6 out of 32     18%
+   Number of DCM_ADVs                        1 out of 4      25%
+   Number of DSP48Es                        13 out of 32     40%
+   Number of GTP_DUALs                       1 out of 4      25%
+   Number of ILOGICs                         5 out of 400     1%
+   Number of External IOBs                 280 out of 360    77%
+      Number of LOCed IOBs                 280 out of 280   100%
+
+   Number of IODELAYs                        5 out of 400     1%
+   Number of External IPADs                  8 out of 386     2%
+      Number of LOCed IPADs                  8 out of 8     100%
+
+   Number of OLOGICs                        22 out of 400     5%
+   Number of External OPADs                  4 out of 16     25%
+      Number of LOCed OPADs                  4 out of 4     100%
+
+   Number of PLL_ADVs                        1 out of 2      50%
+   Number of RAMB18X2s                       3 out of 36      8%
+   Number of RAMB18X2SDPs                    4 out of 36     11%
+   Number of RAMB36_EXPs                     5 out of 36     13%
+   Number of SYSMONs                         1 out of 1     100%
+   Number of TEMACs                          1 out of 2      50%
+   Number of Slices                       3250 out of 4800   67%
+   Number of Slice Registers              6436 out of 19200  33%
+      Number used as Flip Flops           6425
+      Number used as Latches                11
+      Number used as LatchThrus              0
+
+   Number of Slice LUTS                   8221 out of 19200  42%
+   Number of Slice LUT-Flip Flop pairs    9987 out of 19200  52%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please
+   consult the Xilinx Command Line Tools User Guide for information on generating a TSI report.
+Starting initial Timing Analysis.  REAL time: 10 secs 
+Finished initial Timing Analysis.  REAL time: 10 secs 
+
+WARNING:Par:288 - The signal POT2_UP_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal POT2_DOWN_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal N_POT1_SW_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal N_POT2_SW_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal Mem_WAIT_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal TEMP_ADC_CLK_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal N_SPI_SBUF_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal N_MONADC_EOC_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal N_SLOWADC_EOC_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal RFATTN_SDIN_IBUF has no load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 50411 unrouted;      REAL time: 11 secs 
+
+Phase  2  : 42444 unrouted;      REAL time: 12 secs 
+
+Phase  3  : 16482 unrouted;      REAL time: 19 secs 
+
+Phase  4  : 16479 unrouted; (Setup:0, Hold:81868, Component Switching Limit:0)     REAL time: 22 secs 
+
+Updating file: mksuii_x.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:81406, Component Switching Limit:0)     REAL time: 30 secs 
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:81406, Component Switching Limit:0)     REAL time: 30 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:81406, Component Switching Limit:0)     REAL time: 30 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:81406, Component Switching Limit:0)     REAL time: 30 secs 
+WARNING:Route:466 - Unusually high hold time violation detected among 32 connections. The top 20 such instances are
+   printed below. The router will continue and try to fix it
+	u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_addr_txfer<3>:BQ ->
+u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_rd_addr<3>:BX -2865
+	u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_addr_txfer<3>:DQ ->
+u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_rd_addr<3>:DX -2846
+	u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_addr_txfer<7>:AQ ->
+u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_rd_addr<7>:AX -2844
+	u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_addr_txfer<3>:AQ ->
+u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_rd_addr<3>:AX -2839
+	u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_addr_txfer<7>:DQ ->
+u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_rd_addr<7>:DX -2838
+	u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_addr_txfer<11>:AQ ->
+u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_rd_addr<11>:AX -2827
+	u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_addr_txfer<11>:DQ ->
+u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_rd_addr<11>:DX -2814
+	u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_addr_txfer<11>:CQ ->
+u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_rd_addr<11>:CX -2813
+	u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_retran_frame_tog:AQ ->
+u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_addr_diff<3>:B3 -2785
+	u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_txfer_tog:AQ ->
+u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_txfer_tog_sync:BX -2718
+	u_Glink/v5_emac_ll/client_side_FIFO_emac0/rx_fifo_i/wr_store_frame_tog:DQ ->
+u_Glink/v5_emac_ll/client_side_FIFO_emac0/rx_fifo_i/rd_store_frame_tog:CX -2714
+	u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_addr_txfer<7>:BQ ->
+u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_rd_addr<7>:BX -2691
+	u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_addr_txfer<3>:CQ ->
+u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_rd_addr<3>:CX -2677
+	u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_addr_txfer<7>:CQ ->
+u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_rd_addr<7>:CX -2675
+	u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_addr_txfer<11>:BQ ->
+u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_rd_addr<11>:BX -2665
+	u_clkDet/Clk119MhzOK:BQ -> u_Display/u_alu/Prod<3>:A5 -2648
+	u_clkDet/Clk119MhzOK:BQ -> u_Display/u_alu/Prod<3>:B5 -2644
+	u_clkDet/Clk119MhzOK:BQ -> u_Display/u_alu/Prod<11>:B5 -2609
+	u_clkDet/Clk119MhzOK:BQ -> u_Display/u_alu/Prod<15>:A5 -2560
+	u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/rd_tran_frame_tog:BQ ->
+u_Glink/v5_emac_ll/client_side_FIFO_emac0/tx_fifo_i/wr_tran_frame_tog:DX -2550
+
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 31 secs 
+
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 33 secs 
+Total REAL time to Router completion: 33 secs 
+Total CPU time to Router completion: 32 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|              SysClk |BUFGCTRL_X0Y23| No   | 2437 |  0.305     |  1.813      |
++---------------------+--------------+------+------+------------+-------------+
+|             Lnk_Clk |BUFGCTRL_X0Y14| No   |  101 |  0.351     |  1.914      |
++---------------------+--------------+------+------+------------+-------------+
+|u_FastADC/u_ad9228/i |              |      |      |            |             |
+|             DataClk |BUFGCTRL_X0Y20| No   |   43 |  0.129     |  1.648      |
++---------------------+--------------+------+------+------------+-------------+
+|        Clk119MhzBuf |BUFGCTRL_X0Y12| No   |    5 |  0.007     |  1.589      |
++---------------------+--------------+------+------+------------+-------------+
+|   u_FastADC/ADC_Clk |         Local|      |  116 |  0.459     |  4.143      |
++---------------------+--------------+------+------+------------+-------------+
+| u_ClkGen/iClk10hzEn |         Local|      |   21 |  0.633     |  1.625      |
++---------------------+--------------+------+------+------------+-------------+
+|    u_Glink/Clk125_o |         Local|      |    2 |  0.000     |  0.959      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Number of Timing Constraints that were not applied: 9
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_u_clkMux_CLKOUT0_BUF_3 = PERIOD TIMEGR | SETUP       |     0.046ns|     7.954ns|       0|           0
+  P "u_clkMux_CLKOUT0_BUF_3"         TS_CLK | HOLD        |     0.213ns|            |       0|           0
+  119MHZ_IN_p HIGH 50%                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_u_FastADC_u_ad9228_DataClkibufds_CLK27 | SETUP       |     0.267ns|     2.399ns|       0|           0
+  0_BUF_0 = PERIOD TIMEGRP         "u_FastA | HOLD        |     0.313ns|            |       0|           0
+  DC_u_ad9228_DataClkibufds_CLK270_BUF_0" T |             |            |            |        |            
+  S_FADC_DATA_CLK_P         PHASE 2 ns HIGH |             |            |            |        |            
+   50%                                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_FADC_DATA_CLK_N = PERIOD TIMEGRP "FADC | MINLOWPULSE |     0.366ns|     2.300ns|       0|           0
+  _DATA_CLK_N" 375 MHz HIGH 50%             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_FADC_DATA_CLK_P = PERIOD TIMEGRP "FADC | MINLOWPULSE |     0.366ns|     2.300ns|       0|           0
+  _DATA_CLK_P" 375 MHz HIGH 50%             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_u_FastADC_u_ad9228_DataClkibufds_CLK27 | MINLOWPULSE |     0.966ns|     1.700ns|       0|           0
+  0_BUF = PERIOD TIMEGRP         "u_FastADC |             |            |            |        |            
+  _u_ad9228_DataClkibufds_CLK270_BUF" TS_FA |             |            |            |        |            
+  DC_DATA_CLK_N PHASE         2 ns HIGH 50% |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_MGTCLK1_p = PERIOD TIMEGRP "MGTCLK1_p" | SETUP       |     1.256ns|     6.744ns|       0|           0
+   125 MHz HIGH 50%                         | HOLD        |     0.444ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_u_Glink_Clk125_o = PERIOD TIMEGRP "u_G | MINLOWPULSE |     4.000ns|     4.000ns|       0|           0
+  link/Clk125_o" 125 MHz HIGH 50%           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_MGTCLK1_n = PERIOD TIMEGRP "MGTCLK1_n" | MINLOWPULSE |     4.000ns|     4.000ns|       0|           0
+   125 MHz HIGH 50%                         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_CLK119MHZ_IN_n = PERIOD TIMEGRP "CLK11 | MINLOWPULSE |     4.000ns|     4.000ns|       0|           0
+  9MHZ_IN_n" 125 MHz HIGH 50%               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_CLK119MHZ_IN_p = PERIOD TIMEGRP "CLK11 | SETUP       |     6.427ns|     1.573ns|       0|           0
+  9MHZ_IN_p" 125 MHz HIGH 50%               | HOLD        |     0.465ns|            |       0|           0
+                                            | MINLOWPULSE |     4.000ns|     4.000ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_u_clkMux_CLKOUT0_BUF = PERIOD TIMEGRP  | MINPERIOD   |     4.000ns|     4.000ns|       0|           0
+  "u_clkMux_CLKOUT0_BUF"         TS_u_Glink |             |            |            |        |            
+  _Clk125_o HIGH 50%                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_u_clkMux_CLKOUT0_BUF_0 = PERIOD TIMEGR | MINPERIOD   |     4.000ns|     4.000ns|       0|           0
+  P "u_clkMux_CLKOUT0_BUF_0"         TS_MGT |             |            |            |        |            
+  CLK1_n HIGH 50%                           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_u_clkMux_CLKOUT0_BUF_1 = PERIOD TIMEGR | SETUP       |     4.371ns|     3.629ns|       0|           0
+  P "u_clkMux_CLKOUT0_BUF_1"         TS_MGT | HOLD        |     0.622ns|            |       0|           0
+  CLK1_p HIGH 50%                           | MINPERIOD   |     4.000ns|     4.000ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_u_clkMux_CLKOUT0_BUF_2 = PERIOD TIMEGR | MINPERIOD   |     4.000ns|     4.000ns|       0|           0
+  P "u_clkMux_CLKOUT0_BUF_2"         TS_CLK |             |            |            |        |            
+  119MHZ_IN_n HIGH 50%                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_u_FastADC_ADC_Clk = PERIOD TIMEGRP "u_ | SETUP       |    12.738ns|     2.646ns|       0|           0
+  FastADC/ADC_Clk" 65 MHz HIGH 50%          | HOLD        |     0.572ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_u_Glink_Clk125_o
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_u_Glink_Clk125_o            |      8.000ns|      4.000ns|      4.000ns|            0|            0|            0|            0|
+| TS_u_clkMux_CLKOUT0_BUF       |      8.000ns|      4.000ns|          N/A|            0|            0|            0|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_MGTCLK1_n
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_MGTCLK1_n                   |      8.000ns|      4.000ns|      4.000ns|            0|            0|            0|            0|
+| TS_u_clkMux_CLKOUT0_BUF_0     |      8.000ns|      4.000ns|          N/A|            0|            0|            0|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_MGTCLK1_p
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_MGTCLK1_p                   |      8.000ns|      6.744ns|      4.000ns|            0|            0|         4388|           33|
+| TS_u_clkMux_CLKOUT0_BUF_1     |      8.000ns|      4.000ns|          N/A|            0|            0|           33|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_CLK119MHZ_IN_n
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_CLK119MHZ_IN_n              |      8.000ns|      4.000ns|      4.000ns|            0|            0|            0|            0|
+| TS_u_clkMux_CLKOUT0_BUF_2     |      8.000ns|      4.000ns|          N/A|            0|            0|            0|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_CLK119MHZ_IN_p
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_CLK119MHZ_IN_p              |      8.000ns|      4.000ns|      7.954ns|            0|            0|           49|       168615|
+| TS_u_clkMux_CLKOUT0_BUF_3     |      8.000ns|      7.954ns|          N/A|            0|            0|       168615|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_FADC_DATA_CLK_N
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_FADC_DATA_CLK_N             |      2.667ns|      2.300ns|      1.700ns|            0|            0|            0|            0|
+| TS_u_FastADC_u_ad9228_DataClki|      2.667ns|      1.700ns|          N/A|            0|            0|            0|            0|
+| bufds_CLK270_BUF              |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_FADC_DATA_CLK_P
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_FADC_DATA_CLK_P             |      2.667ns|      2.300ns|      2.399ns|            0|            0|            0|          157|
+| TS_u_FastADC_u_ad9228_DataClki|      2.667ns|      2.399ns|          N/A|            0|            0|          157|            0|
+| bufds_CLK270_BUF_0            |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 10 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 36 secs 
+Total CPU time to PAR completion: 35 secs 
+
+Peak Memory Usage:  945 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 13
+Number of info messages: 1
+
+Writing design to file mksuii_x.ncd
+
+
+
+PAR done!

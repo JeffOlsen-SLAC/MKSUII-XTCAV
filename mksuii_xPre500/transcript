@@ -1,0 +1,125 @@
+# Reading C:/modeltech_pe_10.0c/tcl/vsim/pref.tcl 
+# do {FastADCIntf.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim PE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity adds16s16
+# -- Compiling architecture adds16s16_a of adds16s16
+# -- Loading package NUMERIC_STD
+# -- Loading package xbip_addsub_v2_0_comp
+# -- Loading package bip_utils_pkg_v2_0
+# -- Loading package bip_usecase_utils_pkg_v2_0
+# -- Loading package c_addsub_pkg_v11_0
+# -- Loading package xbip_pipe_v2_0_xst_comp
+# -- Loading entity c_addsub_v11_0
+# Model Technology ModelSim PE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Ram512x12dp
+# -- Compiling architecture Ram512x12dp_a of Ram512x12dp
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading entity BLK_MEM_GEN_V4_2
+# Model Technology ModelSim PE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package VCOMPONENTS
+# -- Compiling entity FADCClkDCM
+# -- Compiling architecture BEHAVIORAL of FADCClkDCM
+# Model Technology ModelSim PE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VCOMPONENTS
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package VPKG
+# -- Compiling entity Div20x8
+# -- Compiling architecture STRUCTURE of Div20x8
+# Model Technology ModelSim PE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Acc12x20
+# -- Compiling architecture Acc12x20_a of Acc12x20
+# -- Loading package xbip_accum_v2_0_comp
+# -- Loading package bip_utils_pkg_v2_0
+# -- Loading package bip_usecase_utils_pkg_v2_0
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package xbip_accum_v2_0_pkg
+# -- Loading package c_accum_pkg_v11_0
+# -- Loading entity c_accum_v11_0
+# Model Technology ModelSim PE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity ThresComp
+# -- Compiling architecture Behavioral of ThresComp
+# Model Technology ModelSim PE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Compiling package mksuii
+# -- Compiling package body mksuii
+# -- Loading package mksuii
+# Model Technology ModelSim PE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VCOMPONENTS
+# -- Compiling entity FastDiffIn
+# -- Compiling architecture Behavioral of FastDiffIn
+# Model Technology ModelSim PE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package mksuii
+# -- Compiling entity oneshotCEn4Bit
+# -- Compiling architecture Behaviour of oneshotCEn4Bit
+# Model Technology ModelSim PE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package mksuii
+# -- Compiling entity FastChannel
+# -- Compiling architecture Behavioral of FastChannel
+# Model Technology ModelSim PE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package VCOMPONENTS
+# -- Loading package std_logic_textio
+# -- Loading package mksuii
+# -- Compiling entity ad9228Input
+# -- Compiling architecture Behavioral of ad9228Input
+# Model Technology ModelSim PE vcom 10.0c Compiler 2011.07 Jul 21 2011
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package std_logic_textio
+# -- Loading package mksuii
+# -- Compiling entity FastADCIntf
+# -- Compiling architecture behaviour of FastADCIntf
+# vsim -lib work -voptargs=\"+acc\" -t 1ps work.FastADCIntf 
+# ** Error: Failure to obtain a VHDL simulation license. Unable to checkout msimpevsim license feature.

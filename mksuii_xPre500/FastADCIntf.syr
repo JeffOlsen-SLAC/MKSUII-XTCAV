@@ -1,0 +1,1111 @@
+Release 12.2 - xst M.63c (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: FastADCIntf.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FastADCIntf.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FastADCIntf"
+Output Format                      : NGC
+Target Device                      : xc5vlx30t-1-ff665
+
+---- Source Options
+Top Module Name                    : FastADCIntf
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Off
+Reduce Control Sets                : Off
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3498 - No primary, secondary unit in the file "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/ipcore_dir/Div20x8.vhd. Ignore this file from project file "V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/FastADCIntf_vhdl.prj".
+Compiling vhdl file "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/vhdl/mksuii_x_pkg.vhd" in Library work.
+Compiling vhdl file "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/vhdl/ThresComp.vhd" in Library work.
+Architecture behavioral of Entity threscomp is up to date.
+Compiling vhdl file "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/ipcore_dir/Acc12x20.vhd" in Library work.
+Architecture acc12x20_a of Entity acc12x20 is up to date.
+Compiling vhdl file "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/ipcore_dir/Ram512x12dp.vhd" in Library work.
+Architecture ram512x12dp_a of Entity ram512x12dp is up to date.
+Compiling vhdl file "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/vhdl/ad9228Input.vhd" in Library work.
+Architecture behavioral of Entity ad9228input is up to date.
+Compiling vhdl file "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/vhdl/FastChannel.vhd" in Library work.
+Architecture behavioral of Entity fastchannel is up to date.
+Compiling vhdl file "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/vhdl/FastADCIntf.vhd" in Library work.
+Entity <fastadcintf> compiled.
+Entity <FastADCIntf> (Architecture <behaviour>) compiled.
+Compiling vhdl file "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/ipcore_dir/DriveLKUP.vhd" in Library work.
+Architecture drivelkup_a of Entity drivelkup is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <FastADCIntf> in library <work> (architecture <behaviour>).
+
+Analyzing hierarchy for entity <ad9228Input> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FastChannel> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ThresComp> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <FastADCIntf> in library <work> (Architecture <behaviour>).
+Entity <FastADCIntf> analyzed. Unit <FastADCIntf> generated.
+
+Analyzing Entity <ad9228Input> in library <work> (Architecture <behavioral>).
+    Set user-defined property "DDR_CLK_EDGE =  OPPOSITE_EDGE" for instance <FADC_Clkoddr> in unit <ad9228Input>.
+    Set user-defined property "INIT =  0" for instance <FADC_Clkoddr> in unit <ad9228Input>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <FADC_Clkoddr> in unit <ad9228Input>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <FADC_Clkobufds> in unit <ad9228Input>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <FADC_Clkobufds> in unit <ad9228Input>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <FrameClkibufds> in unit <ad9228Input>.
+    Set user-defined property "DIFF_TERM =  TRUE" for instance <FrameClkibufds> in unit <ad9228Input>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <FrameClkibufds> in unit <ad9228Input>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <FrameClkibufds> in unit <ad9228Input>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <FrameClkibufds> in unit <ad9228Input>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <FrameClkibufds> in unit <ad9228Input>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <DataClkibufds> in unit <ad9228Input>.
+    Set user-defined property "DIFF_TERM =  TRUE" for instance <DataClkibufds> in unit <ad9228Input>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <DataClkibufds> in unit <ad9228Input>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <DataClkibufds> in unit <ad9228Input>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <DataClkibufds> in unit <ad9228Input>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <DataClkibufds> in unit <ad9228Input>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <BeamVibufds> in unit <ad9228Input>.
+    Set user-defined property "DIFF_TERM =  TRUE" for instance <BeamVibufds> in unit <ad9228Input>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <BeamVibufds> in unit <ad9228Input>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <BeamVibufds> in unit <ad9228Input>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <BeamVibufds> in unit <ad9228Input>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <BeamVibufds> in unit <ad9228Input>.
+    Set user-defined property "DDR_CLK_EDGE =  SAME_EDGE_PIPELINED" for instance <BEAM_Viddr> in unit <ad9228Input>.
+    Set user-defined property "INIT_Q1 =  0" for instance <BEAM_Viddr> in unit <ad9228Input>.
+    Set user-defined property "INIT_Q2 =  0" for instance <BEAM_Viddr> in unit <ad9228Input>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <BEAM_Viddr> in unit <ad9228Input>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <Beam_Iibufds> in unit <ad9228Input>.
+    Set user-defined property "DIFF_TERM =  TRUE" for instance <Beam_Iibufds> in unit <ad9228Input>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <Beam_Iibufds> in unit <ad9228Input>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <Beam_Iibufds> in unit <ad9228Input>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <Beam_Iibufds> in unit <ad9228Input>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <Beam_Iibufds> in unit <ad9228Input>.
+    Set user-defined property "DDR_CLK_EDGE =  SAME_EDGE_PIPELINED" for instance <BEAM_Iiddr> in unit <ad9228Input>.
+    Set user-defined property "INIT_Q1 =  0" for instance <BEAM_Iiddr> in unit <ad9228Input>.
+    Set user-defined property "INIT_Q2 =  0" for instance <BEAM_Iiddr> in unit <ad9228Input>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <BEAM_Iiddr> in unit <ad9228Input>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <FWD_PWRibufds> in unit <ad9228Input>.
+    Set user-defined property "DIFF_TERM =  TRUE" for instance <FWD_PWRibufds> in unit <ad9228Input>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <FWD_PWRibufds> in unit <ad9228Input>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <FWD_PWRibufds> in unit <ad9228Input>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <FWD_PWRibufds> in unit <ad9228Input>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <FWD_PWRibufds> in unit <ad9228Input>.
+    Set user-defined property "DDR_CLK_EDGE =  SAME_EDGE_PIPELINED" for instance <FWD_PWRiddr> in unit <ad9228Input>.
+    Set user-defined property "INIT_Q1 =  0" for instance <FWD_PWRiddr> in unit <ad9228Input>.
+    Set user-defined property "INIT_Q2 =  0" for instance <FWD_PWRiddr> in unit <ad9228Input>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <FWD_PWRiddr> in unit <ad9228Input>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <REFL_PWRibufds> in unit <ad9228Input>.
+    Set user-defined property "DIFF_TERM =  TRUE" for instance <REFL_PWRibufds> in unit <ad9228Input>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <REFL_PWRibufds> in unit <ad9228Input>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <REFL_PWRibufds> in unit <ad9228Input>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <REFL_PWRibufds> in unit <ad9228Input>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <REFL_PWRibufds> in unit <ad9228Input>.
+    Set user-defined property "DDR_CLK_EDGE =  SAME_EDGE_PIPELINED" for instance <REFL_PWRiddr> in unit <ad9228Input>.
+    Set user-defined property "INIT_Q1 =  0" for instance <REFL_PWRiddr> in unit <ad9228Input>.
+    Set user-defined property "INIT_Q2 =  0" for instance <REFL_PWRiddr> in unit <ad9228Input>.
+    Set user-defined property "SRTYPE =  SYNC" for instance <REFL_PWRiddr> in unit <ad9228Input>.
+Entity <ad9228Input> analyzed. Unit <ad9228Input> generated.
+
+Analyzing Entity <FastChannel> in library <work> (Architecture <behavioral>).
+WARNING:Xst:1610 - "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/vhdl/FastChannel.vhd" line 130: Width mismatch. <NSamples> has a width of 9 bits but assigned expression is 10-bit wide.
+WARNING:Xst:2211 - "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/vhdl/FastChannel.vhd" line 218: Instantiating black box module <Acc12x20>.
+WARNING:Xst:753 - "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/vhdl/FastChannel.vhd" line 229: Unconnected output port 'fractional' of component 'Div20x8'.
+WARNING:Xst:2211 - "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/vhdl/FastChannel.vhd" line 229: Instantiating black box module <Div20x8>.
+WARNING:Xst:2211 - "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/vhdl/FastChannel.vhd" line 240: Instantiating black box module <Ram512x12dp>.
+Entity <FastChannel> analyzed. Unit <FastChannel> generated.
+
+Analyzing Entity <ThresComp> in library <work> (Architecture <behavioral>).
+Entity <ThresComp> analyzed. Unit <ThresComp> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ThresComp>.
+    Related source file is "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/vhdl/ThresComp.vhd".
+    Found 12-bit comparator equal for signal <Equal$cmp_eq0000> created at line 52.
+    Found 12-bit comparator greater for signal <GrtrThan$cmp_gt0000> created at line 40.
+    Found 12-bit comparator less for signal <LessThan$cmp_lt0000> created at line 46.
+    Summary:
+	inferred   3 Comparator(s).
+Unit <ThresComp> synthesized.
+
+
+Synthesizing Unit <ad9228Input>.
+    Related source file is "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/vhdl/ad9228Input.vhd".
+WARNING:Xst:1780 - Signal <q_temp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <iADC_Data> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <d_temp> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 12-bit register for signal <Beam_I_Data>.
+    Found 12-bit register for signal <REFL_PWR_Data>.
+    Found 12-bit register for signal <Beam_V_Data>.
+    Found 12-bit register for signal <FWD_PWR_Data>.
+    Found 12-bit register for signal <Beam_ISr>.
+    Found 12-bit register for signal <Beam_VSr>.
+    Found 1-bit register for signal <DataStrb>.
+    Found 2-bit register for signal <DataStrbSr>.
+    Found 12-bit register for signal <FWD_PWRSr>.
+    Found 12-bit register for signal <REFL_PWRSr>.
+    Summary:
+	inferred  99 D-type flip-flop(s).
+Unit <ad9228Input> synthesized.
+
+
+Synthesizing Unit <FastChannel>.
+    Related source file is "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/vhdl/FastChannel.vhd".
+WARNING:Xst:646 - Signal <iAverage<19:12>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Equal> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <DivRfd> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <FastADC_State>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 8                                              |
+    | Clock              | TimingClk                 (rising_edge)        |
+    | Clock enable       | ADCClk                    (positive)           |
+    | Reset              | Reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle_s                                         |
+    | Power Up State     | idle_s                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 2-bit register for signal <Status>.
+    Found 12-bit register for signal <Average>.
+    Found 1-bit register for signal <AddB>.
+    Found 9-bit comparator less for signal <AddB$cmp_lt0000> created at line 158.
+    Found 5-bit register for signal <DivDel>.
+    Found 5-bit adder for signal <DivDel$addsub0000> created at line 177.
+    Found 1-bit register for signal <DivEn>.
+    Found 9-bit comparator equal for signal <FastADC_State$cmp_eq0001> created at line 145.
+    Found 1-bit register for signal <LoadB>.
+    Found 9-bit register for signal <NSamples>.
+    Found 9-bit adder for signal <NSamples$add0000> created at line 130.
+    Found 9-bit subtractor for signal <NSamples$addsub0000> created at line 130.
+    Found 12-bit register for signal <Threshold>.
+    Found 9-bit register for signal <WFM_WAddr>.
+    Found 9-bit adder for signal <WFM_WAddr$share0000> created at line 123.
+    Found 1-bit register for signal <WFM_Wr<0>>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  53 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <FastChannel> synthesized.
+
+
+Synthesizing Unit <FastADCIntf>.
+    Related source file is "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/vhdl/FastADCIntf.vhd".
+WARNING:Xst:647 - Input <Reg_Wr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Reg_Addr<15:9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1306 - Output <Reg_DataOut> is never assigned.
+WARNING:Xst:647 - Input <Reg_DataIn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <TimeCntr> is used but never assigned. This sourceless signal will be automatically connected to value 000000000.
+WARNING:Xst:646 - Signal <REFL_PWR_WFM_DOut> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <REFL_PWR_Stop> is used but never assigned. This sourceless signal will be automatically connected to value 000000000.
+WARNING:Xst:646 - Signal <REFL_PWR_Status> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <REFL_PWR_Start> is used but never assigned. This sourceless signal will be automatically connected to value 000000000.
+WARNING:Xst:653 - Signal <REFL_PWR_Lo_Thres> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000.
+WARNING:Xst:653 - Signal <REFL_PWR_Hi_Thres> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000.
+WARNING:Xst:646 - Signal <REFL_PWR_Average> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <FWD_PWR_WFM_DOut> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <FWD_PWR_Stop> is used but never assigned. This sourceless signal will be automatically connected to value 000000000.
+WARNING:Xst:646 - Signal <FWD_PWR_Status> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <FWD_PWR_Start> is used but never assigned. This sourceless signal will be automatically connected to value 000000000.
+WARNING:Xst:653 - Signal <FWD_PWR_Lo_Thres> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000.
+WARNING:Xst:653 - Signal <FWD_PWR_Hi_Thres> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000.
+WARNING:Xst:646 - Signal <FWD_PWR_Average> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Beam_V_WFM_DOut> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <Beam_V_Stop> is used but never assigned. This sourceless signal will be automatically connected to value 000000000.
+WARNING:Xst:646 - Signal <Beam_V_Status> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <Beam_V_Start> is used but never assigned. This sourceless signal will be automatically connected to value 000000000.
+WARNING:Xst:653 - Signal <Beam_V_Lo_Thres> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000.
+WARNING:Xst:653 - Signal <Beam_V_Hi_Thres> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000.
+WARNING:Xst:646 - Signal <Beam_V_Average> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Beam_I_WFM_DOut> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <Beam_I_Stop> is used but never assigned. This sourceless signal will be automatically connected to value 000000000.
+WARNING:Xst:646 - Signal <Beam_I_Status> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <Beam_I_Start> is used but never assigned. This sourceless signal will be automatically connected to value 000000000.
+WARNING:Xst:653 - Signal <Beam_I_Lo_Thres> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000.
+WARNING:Xst:653 - Signal <Beam_I_Hi_Thres> is used but never assigned. This sourceless signal will be automatically connected to value 000000000000.
+WARNING:Xst:646 - Signal <Beam_I_Average> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <ADC_Clk> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <FastADCIntf> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 16
+ 5-bit adder                                           : 4
+ 9-bit adder                                           : 8
+ 9-bit subtractor                                      : 4
+# Registers                                            : 54
+ 1-bit register                                        : 25
+ 12-bit register                                       : 16
+ 2-bit register                                        : 1
+ 5-bit register                                        : 4
+ 9-bit register                                        : 8
+# Comparators                                          : 20
+ 12-bit comparator equal                               : 4
+ 12-bit comparator greater                             : 4
+ 12-bit comparator less                                : 4
+ 9-bit comparator equal                                : 4
+ 9-bit comparator less                                 : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <u_BeamV/FastADC_State/FSM> on signal <FastADC_State[1:6]> with one-hot encoding.
+Optimizing FSM <u_BeamI/FastADC_State/FSM> on signal <FastADC_State[1:6]> with one-hot encoding.
+Optimizing FSM <u_FWDPWR/FastADC_State/FSM> on signal <FastADC_State[1:6]> with one-hot encoding.
+Optimizing FSM <u_REFLPWR/FastADC_State/FSM> on signal <FastADC_State[1:6]> with one-hot encoding.
+------------------------
+ State      | Encoding
+------------------------
+ idle_s     | 000001
+ start_s    | 000100
+ stop_s     | 000010
+ average_s  | 001000
+ lo_thres_s | 010000
+ hi_thres_s | 100000
+------------------------
+Reading core <ipcore_dir/Acc12x20.ngc>.
+Reading core <ipcore_dir/Div20x8.ngc>.
+Reading core <ipcore_dir/Ram512x12dp.ngc>.
+Loading core <Acc12x20> for timing and area information for instance <u_FastAcc>.
+Loading core <Div20x8> for timing and area information for instance <u_FastDiv>.
+Loading core <Ram512x12dp> for timing and area information for instance <u_Wfm>.
+WARNING:Xst:1290 - Hierarchical block <u_Comp> is unconnected in block <u_BeamV>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <u_Comp> is unconnected in block <u_BeamI>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <u_Comp> is unconnected in block <u_FWDPWR>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <u_Comp> is unconnected in block <u_REFLPWR>.
+   It will be removed from the design.
+INFO:Xst:2261 - The FF/Latch <WFM_Wr_0> in Unit <u_BeamV> is equivalent to the following 2 FFs/Latches, which will be removed : <LoadB> <AddB> 
+INFO:Xst:2261 - The FF/Latch <WFM_Wr_0> in Unit <u_BeamI> is equivalent to the following 2 FFs/Latches, which will be removed : <LoadB> <AddB> 
+INFO:Xst:2261 - The FF/Latch <WFM_Wr_0> in Unit <u_FWDPWR> is equivalent to the following 2 FFs/Latches, which will be removed : <LoadB> <AddB> 
+INFO:Xst:2261 - The FF/Latch <WFM_Wr_0> in Unit <u_REFLPWR> is equivalent to the following 2 FFs/Latches, which will be removed : <LoadB> <AddB> 
+WARNING:Xst:1710 - FF/Latch <NSamples_7> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_6> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_5> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_4> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_3> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_2> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_1> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_0> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivEn> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_8> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_7> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_6> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_5> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_4> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_3> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_2> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_1> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_0> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_Wr_0> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_4> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_3> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_2> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_1> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_0> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd5> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd4> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd6> has a constant value of 1 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd2> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd3> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_8> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_8> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_7> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_6> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_5> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_4> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_3> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_2> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_1> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_0> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivEn> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_8> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_7> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_6> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_5> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_4> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_3> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_2> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_1> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_0> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_Wr_0> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_4> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_3> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_2> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_1> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_0> (without init value) has a constant value of 0 in block <u_REFLPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd5> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd4> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd6> has a constant value of 1 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd2> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd3> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_8> (without init value) has a constant value of 0 in block <u_FWDPWR>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_8> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_7> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_6> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_5> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_4> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_3> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_2> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_1> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_0> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivEn> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_8> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_7> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_6> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_5> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_4> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_3> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_2> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_1> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_0> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_Wr_0> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_4> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_3> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_2> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_1> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_0> (without init value) has a constant value of 0 in block <u_BeamV>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd5> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd4> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd6> has a constant value of 1 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd2> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd3> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_7> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_6> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_5> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_4> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_3> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_2> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_1> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <NSamples_0> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivEn> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_8> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_7> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_6> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_5> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_4> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_3> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd3> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd2> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd6> has a constant value of 1 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd4> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <FFd5> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_0> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_1> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_2> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_3> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <DivDel_4> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_Wr_0> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_0> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_1> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <WFM_WAddr_2> (without init value) has a constant value of 0 in block <u_BeamI>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <FFd1> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <FFd1> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <FFd1> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <FFd1> has a constant value of 0 in block <FSM>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 16
+ 5-bit adder                                           : 4
+ 9-bit adder                                           : 8
+ 9-bit subtractor                                      : 4
+# Registers                                            : 311
+ Flip-Flops                                            : 311
+# Comparators                                          : 20
+ 12-bit comparator equal                               : 4
+ 12-bit comparator greater                             : 4
+ 12-bit comparator less                                : 4
+ 9-bit comparator equal                                : 4
+ 9-bit comparator less                                 : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:1901 - Instance BEAM_Viddr in unit ad9228Input of type IDDR has been replaced by IDDR_2CLK
+INFO:Xst:1901 - Instance BEAM_Iiddr in unit ad9228Input of type IDDR has been replaced by IDDR_2CLK
+INFO:Xst:1901 - Instance FWD_PWRiddr in unit ad9228Input of type IDDR has been replaced by IDDR_2CLK
+INFO:Xst:1901 - Instance REFL_PWRiddr in unit ad9228Input of type IDDR has been replaced by IDDR_2CLK
+
+Optimizing unit <FastADCIntf> ...
+
+Optimizing unit <ad9228Input> ...
+
+Optimizing unit <FastChannel> ...
+WARNING:Xst:1710 - FF/Latch <u_BeamI/Threshold_9> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/Threshold_8> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/Threshold_7> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/Threshold_6> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/Threshold_5> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/Threshold_4> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/Threshold_3> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/Threshold_2> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/Threshold_1> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/Threshold_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/DivDel_4> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/DivDel_3> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/DivDel_2> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/DivDel_1> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/DivDel_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/WFM_WAddr_8> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/WFM_WAddr_7> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/WFM_WAddr_6> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/WFM_WAddr_5> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/WFM_WAddr_4> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/WFM_WAddr_3> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/WFM_WAddr_2> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/WFM_WAddr_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/WFM_Wr_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/WFM_WAddr_1> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/FastADC_State_FSM_FFd5> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/FastADC_State_FSM_FFd4> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/FastADC_State_FSM_FFd6> has a constant value of 1 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/FastADC_State_FSM_FFd2> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/FastADC_State_FSM_FFd3> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/NSamples_8> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/NSamples_7> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/NSamples_6> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/NSamples_5> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/NSamples_4> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/NSamples_3> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/NSamples_2> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/NSamples_1> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/NSamples_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/AddB> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/DivEn> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/LoadB> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/Threshold_11> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/Threshold_10> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/Threshold_10> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/Threshold_9> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/Threshold_8> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/Threshold_7> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/Threshold_6> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/Threshold_5> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/Threshold_4> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/Threshold_3> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/Threshold_2> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/Threshold_1> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/Threshold_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/DivDel_4> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/DivDel_3> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/DivDel_2> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/DivDel_1> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/DivDel_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/WFM_WAddr_8> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/WFM_WAddr_7> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/WFM_WAddr_6> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/WFM_WAddr_5> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/WFM_WAddr_4> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/WFM_WAddr_3> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/WFM_WAddr_1> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/WFM_WAddr_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/WFM_Wr_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/WFM_WAddr_2> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/FastADC_State_FSM_FFd5> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/FastADC_State_FSM_FFd4> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/FastADC_State_FSM_FFd6> has a constant value of 1 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/FastADC_State_FSM_FFd2> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/FastADC_State_FSM_FFd3> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/NSamples_8> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/NSamples_7> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/NSamples_6> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/NSamples_5> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/NSamples_4> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/NSamples_3> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/NSamples_2> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/NSamples_1> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/NSamples_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/AddB> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/DivEn> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/LoadB> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/Threshold_11> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/Threshold_7> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/Threshold_6> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/Threshold_5> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/Threshold_4> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/Threshold_3> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/Threshold_2> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/Threshold_1> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/Threshold_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/DivDel_4> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/DivDel_3> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/DivDel_2> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/DivDel_1> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/DivDel_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/WFM_WAddr_8> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/WFM_WAddr_7> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/WFM_WAddr_6> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/WFM_WAddr_5> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/WFM_WAddr_4> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/WFM_WAddr_3> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/WFM_WAddr_2> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/WFM_WAddr_1> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/WFM_WAddr_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/WFM_Wr_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/FastADC_State_FSM_FFd5> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/FastADC_State_FSM_FFd4> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/FastADC_State_FSM_FFd6> has a constant value of 1 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/FastADC_State_FSM_FFd2> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/FastADC_State_FSM_FFd3> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/NSamples_8> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/NSamples_7> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/NSamples_6> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/NSamples_5> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/NSamples_4> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/NSamples_3> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/NSamples_2> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/NSamples_1> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/NSamples_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/AddB> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/DivEn> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/LoadB> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/Threshold_11> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/Threshold_10> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/Threshold_9> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/Threshold_8> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/Threshold_8> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/Threshold_7> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/Threshold_6> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/Threshold_5> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/Threshold_4> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/Threshold_3> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/Threshold_2> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/Threshold_1> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/Threshold_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/DivDel_4> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/DivDel_3> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/DivDel_2> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/DivDel_1> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/DivDel_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/WFM_WAddr_8> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/WFM_WAddr_7> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/WFM_WAddr_6> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/WFM_WAddr_5> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/WFM_WAddr_4> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/WFM_WAddr_3> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/WFM_WAddr_2> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/WFM_WAddr_1> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/WFM_Wr_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/WFM_WAddr_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/FastADC_State_FSM_FFd5> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/FastADC_State_FSM_FFd4> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/FastADC_State_FSM_FFd6> has a constant value of 1 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/FastADC_State_FSM_FFd2> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/FastADC_State_FSM_FFd3> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/NSamples_8> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/NSamples_7> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/NSamples_6> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/NSamples_5> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/NSamples_4> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/NSamples_3> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/NSamples_2> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/NSamples_1> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/NSamples_0> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/AddB> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/DivEn> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/LoadB> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/Threshold_11> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/Threshold_10> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/Threshold_9> (without init value) has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_BeamV/FastADC_State_FSM_FFd1> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_BeamI/FastADC_State_FSM_FFd1> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_FWDPWR/FastADC_State_FSM_FFd1> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <u_REFLPWR/FastADC_State_FSM_FFd1> has a constant value of 0 in block <FastADCIntf>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <u_REFLPWR/Status_1> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_REFLPWR/Status_0> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_REFLPWR/Average_11> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_REFLPWR/Average_10> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_REFLPWR/Average_9> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_REFLPWR/Average_8> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_REFLPWR/Average_7> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_REFLPWR/Average_6> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_REFLPWR/Average_5> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_REFLPWR/Average_4> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_REFLPWR/Average_3> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_REFLPWR/Average_2> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_REFLPWR/Average_1> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_REFLPWR/Average_0> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_FWDPWR/Status_1> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_FWDPWR/Status_0> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_FWDPWR/Average_11> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_FWDPWR/Average_10> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_FWDPWR/Average_9> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_FWDPWR/Average_8> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_FWDPWR/Average_7> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_FWDPWR/Average_6> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_FWDPWR/Average_5> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_FWDPWR/Average_4> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_FWDPWR/Average_3> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_FWDPWR/Average_2> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_FWDPWR/Average_1> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_FWDPWR/Average_0> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamI/Status_1> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamI/Status_0> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamI/Average_11> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamI/Average_10> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamI/Average_9> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamI/Average_8> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamI/Average_7> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamI/Average_6> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamI/Average_5> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamI/Average_4> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamI/Average_3> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamI/Average_2> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamI/Average_1> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamI/Average_0> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamV/Status_1> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamV/Status_0> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamV/Average_11> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamV/Average_10> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamV/Average_9> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamV/Average_8> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamV/Average_7> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamV/Average_6> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamV/Average_5> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamV/Average_4> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamV/Average_3> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamV/Average_2> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamV/Average_1> of sequential type is unconnected in block <FastADCIntf>.
+WARNING:Xst:2677 - Node <u_BeamV/Average_0> of sequential type is unconnected in block <FastADCIntf>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block FastADCIntf, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 99
+ Flip-Flops                                            : 99
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : FastADCIntf.ngr
+Top Level Output File Name         : FastADCIntf
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 67
+
+Cell Usage :
+# BELS                             : 1732
+#      GND                         : 13
+#      INV                         : 85
+#      LUT1                        : 8
+#      LUT2                        : 113
+#      LUT3                        : 372
+#      LUT4                        : 236
+#      LUT5                        : 20
+#      LUT6                        : 40
+#      MULT_AND                    : 40
+#      MUXCY                       : 388
+#      MUXF7                       : 8
+#      VCC                         : 9
+#      XORCY                       : 400
+# FlipFlops/Latches                : 1372
+#      FDC                         : 51
+#      FDCE                        : 48
+#      FDE                         : 1268
+#      IDDR_2CLK                   : 4
+#      ODDR                        : 1
+# RAMS                             : 4
+#      RAMB18SDP                   : 4
+# Shift Registers                  : 8
+#      SRLC32E                     : 8
+# Clock Buffers                    : 3
+#      BUFG                        : 1
+#      BUFGP                       : 2
+# IO Buffers                       : 17
+#      IBUF                        : 10
+#      IBUFDS                      : 6
+#      OBUFDS                      : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx30tff665-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1372  out of  19200     7%  
+ Number of Slice LUTs:                  882  out of  19200     4%  
+    Number used as Logic:               874  out of  19200     4%  
+    Number used as Memory:                8  out of   5120     0%  
+       Number used as SRL:                8
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1689
+   Number with an unused Flip Flop:     317  out of   1689    18%  
+   Number with an unused LUT:           807  out of   1689    47%  
+   Number of fully used LUT-FF pairs:   565  out of   1689    33%  
+   Number of unique control sets:        22
+
+IO Utilization: 
+ Number of IOs:                          67
+ Number of bonded IOBs:                  26  out of    360     7%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                2  out of     36     5%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+----------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)      | Load  |
+-----------------------------------+----------------------------+-------+
+ADC_Clk                            | NONE(u_ad9228/FADC_Clkoddr)| 1     |
+FADC_DATA_CLK_P                    | IBUFDS+BUFG                | 99    |
+RegClk                             | BUFGP                      | 4     |
+TimingClk                          | BUFGP                      | 1280  |
+-----------------------------------+----------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+Reset                              | IBUF                   | 99    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 2.909ns (Maximum Frequency: 343.761MHz)
+   Minimum input arrival time before clock: 1.295ns
+   Maximum output required time after clock: 3.395ns
+   Maximum combinational path delay: 1.295ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'FADC_DATA_CLK_P'
+  Clock period: 1.150ns (frequency: 869.368MHz)
+  Total number of paths / destination ports: 139 / 138
+-------------------------------------------------------------------------
+Delay:               1.150ns (Levels of Logic = 0)
+  Source:            u_ad9228/DataStrb (FF)
+  Destination:       u_ad9228/FWD_PWR_Data_11 (FF)
+  Source Clock:      FADC_DATA_CLK_P rising
+  Destination Clock: FADC_DATA_CLK_P rising
+
+  Data Path: u_ad9228/DataStrb to u_ad9228/FWD_PWR_Data_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             48   0.471   0.466  u_ad9228/DataStrb (u_ad9228/DataStrb)
+     FDCE:CE                   0.213          u_ad9228/Beam_V_Data_0
+    ----------------------------------------
+    Total                      1.150ns (0.684ns logic, 0.466ns route)
+                                       (59.5% logic, 40.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'TimingClk'
+  Clock period: 2.909ns (frequency: 343.761MHz)
+  Total number of paths / destination ports: 14792 / 1780
+-------------------------------------------------------------------------
+Delay:               2.909ns (Levels of Logic = 12)
+  Source:            u_REFLPWR/u_FastDiv/BU2/U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].mux_div_clk.mux_sig.mux_adsu/opt_has_pipe.first_q_2 (FF)
+  Destination:       u_REFLPWR/u_FastDiv/BU2/U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[8].mux_div_clk.mux_sig.mux_adsu/opt_has_pipe.first_q_1 (FF)
+  Source Clock:      TimingClk rising
+  Destination Clock: TimingClk rising
+
+  Data Path: u_REFLPWR/u_FastDiv/BU2/U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].mux_div_clk.mux_sig.mux_adsu/opt_has_pipe.first_q_2 to u_REFLPWR/u_FastDiv/BU2/U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[8].mux_div_clk.mux_sig.mux_adsu/opt_has_pipe.first_q_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.471   0.710  U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].mux_div_clk.mux_sig.mux_adsu/opt_has_pipe.first_q_2 (U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].mux_div_clk.mux_sig.mux_adsu/opt_has_pipe.first_q<2>)
+     LUT3:I0->O            1   0.094   0.000  U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/i_simple_model.halfsum<0>1 (U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/i_simple_model.halfsum<0>)
+     MUXCY:S->O            1   0.372   0.000  U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/i_simple_model.i_need_mux.carrymux0 (U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/carry_simple<0>)
+     MUXCY:CI->O           1   0.026   0.000  U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/i_simple_model.i_gt_1.carrychaingen[1].carrymux (U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/carry_simple<1>)
+     MUXCY:CI->O           1   0.026   0.000  U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/i_simple_model.i_gt_1.carrychaingen[2].carrymux (U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/carry_simple<2>)
+     MUXCY:CI->O           1   0.026   0.000  U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/i_simple_model.i_gt_1.carrychaingen[3].carrymux (U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/carry_simple<3>)
+     MUXCY:CI->O           1   0.026   0.000  U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/i_simple_model.i_gt_1.carrychaingen[4].carrymux (U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/carry_simple<4>)
+     MUXCY:CI->O           1   0.026   0.000  U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/i_simple_model.i_gt_1.carrychaingen[5].carrymux (U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/carry_simple<5>)
+     MUXCY:CI->O           1   0.026   0.000  U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/i_simple_model.i_gt_1.carrychaingen[6].carrymux (U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/carry_simple<6>)
+     MUXCY:CI->O           1   0.026   0.000  U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/i_simple_model.i_gt_1.carrychaingen[7].carrymux (U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/carry_simple<7>)
+     MUXCY:CI->O           1   0.026   0.000  U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/i_simple_model.i_gt_1.carrychaingen[8].carrymux (U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/carry_simple<8>)
+     XORCY:CI->O           6   0.357   0.603  U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[0].adder_gen.no_reg.adsu_mod/add1/no_pipelining.the_addsub/i_lut4.i_lut4_addsub/i_simple_model.i_gt_1.carryxortop (U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/adsu_o<0><9>)
+     LUT4:I2->O            1   0.094   0.000  U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/Mmux_pre_mux_o<8>13 (U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/pre_mux_o<8><0>)
+     FDE:D                    -0.018          U0/i_synth_opt.i_nonzero_fract.i_synth/i_algo_r2_nr.i_sdivider/I_SYNTH_MODEL/divider_blk/div_loop[8].mux_div_clk.mux_sig.mux_adsu/opt_has_pipe.first_q_0
+    ----------------------------------------
+    Total                      2.909ns (1.596ns logic, 1.313ns route)
+                                       (54.9% logic, 45.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ADC_Clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.295ns (Levels of Logic = 1)
+  Source:            Reset (PAD)
+  Destination:       u_ad9228/FADC_Clkoddr (FF)
+  Destination Clock: ADC_Clk rising
+
+  Data Path: Reset to u_ad9228/FADC_Clkoddr
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           104   0.818   0.477  Reset_IBUF (Reset_IBUF)
+     ODDR:R                    0.000          u_ad9228/FADC_Clkoddr
+    ----------------------------------------
+    Total                      1.295ns (0.818ns logic, 0.477ns route)
+                                       (63.2% logic, 36.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'FADC_DATA_CLK_P'
+  Total number of paths / destination ports: 10 / 9
+-------------------------------------------------------------------------
+Offset:              1.154ns (Levels of Logic = 1)
+  Source:            FADC_FRAME_CLK_P (PAD)
+  Destination:       u_ad9228/DataStrbSr_0 (FF)
+  Destination Clock: FADC_DATA_CLK_P rising
+
+  Data Path: FADC_FRAME_CLK_P to u_ad9228/DataStrbSr_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUFDS:I->O           1   0.818   0.336  u_ad9228/FrameClkibufds (u_ad9228/FrameClk)
+     FDC:D                    -0.018          u_ad9228/DataStrbSr_0
+    ----------------------------------------
+    Total                      1.154ns (0.818ns logic, 0.336ns route)
+                                       (70.9% logic, 29.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'RegClk'
+  Total number of paths / destination ports: 36 / 36
+-------------------------------------------------------------------------
+Offset:              1.170ns (Levels of Logic = 2)
+  Source:            Reg_Addr<8> (PAD)
+  Destination:       u_REFLPWR/u_Wfm/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.WIDE_PRIM18.TDP (RAM)
+  Destination Clock: RegClk rising
+
+  Data Path: Reg_Addr<8> to u_REFLPWR/u_Wfm/BU2/U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.WIDE_PRIM18.TDP
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.818   0.352  Reg_Addr_8_IBUF (Reg_Addr_8_IBUF)
+     begin scope: 'u_REFLPWR/u_Wfm'
+     begin scope: 'BU2'
+     RAMB18SDP:RDADDR8         0.000          U0/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/SDP.WIDE_PRIM18.TDP
+    ----------------------------------------
+    Total                      1.170ns (0.818ns logic, 0.352ns route)
+                                       (69.9% logic, 30.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ADC_Clk'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.395ns (Levels of Logic = 1)
+  Source:            u_ad9228/FADC_Clkoddr (FF)
+  Destination:       FADC_CLK_N (PAD)
+  Source Clock:      ADC_Clk rising
+
+  Data Path: u_ad9228/FADC_Clkoddr to FADC_CLK_N
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     ODDR:C->Q             1   0.607   0.336  u_ad9228/FADC_Clkoddr (u_ad9228/FADC_Clk)
+     OBUFDS:I->O               2.452          u_ad9228/FADC_Clkobufds (FADC_CLK_P)
+    ----------------------------------------
+    Total                      3.395ns (3.059ns logic, 0.336ns route)
+                                       (90.1% logic, 9.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 12 / 8
+-------------------------------------------------------------------------
+Delay:               1.295ns (Levels of Logic = 1)
+  Source:            Reset (PAD)
+  Destination:       u_ad9228/REFL_PWRiddr:R (PAD)
+
+  Data Path: Reset to u_ad9228/REFL_PWRiddr:R
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           104   0.818   0.477  Reset_IBUF (Reset_IBUF)
+    IDDR_2CLK:R                0.000          u_ad9228/BEAM_Viddr
+    ----------------------------------------
+    Total                      1.295ns (0.818ns logic, 0.477ns route)
+                                       (63.2% logic, 36.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 18.02 secs
+ 
+--> 
+
+Total memory usage is 187532 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  410 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+

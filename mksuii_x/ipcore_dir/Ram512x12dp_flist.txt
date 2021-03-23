@@ -1,0 +1,15 @@
+# Output products list for <Ram512x12dp>
+Ram512x12dp.asy
+Ram512x12dp.gise
+Ram512x12dp.ngc
+Ram512x12dp.v
+Ram512x12dp.veo
+Ram512x12dp.vhd
+Ram512x12dp.vho
+Ram512x12dp.xco
+Ram512x12dp.xise
+Ram512x12dp_flist.txt
+Ram512x12dp_xmdf.tcl
+_xmsgs\pn_parser.xmsgs
+blk_mem_gen_ds512.pdf
+blk_mem_gen_readme.txt

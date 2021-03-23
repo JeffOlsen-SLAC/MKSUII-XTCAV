@@ -1,0 +1,15 @@
+# Output products list for <adds16s16>
+_xmsgs\pn_parser.xmsgs
+adds16s16.asy
+adds16s16.gise
+adds16s16.ngc
+adds16s16.sym
+adds16s16.v
+adds16s16.veo
+adds16s16.vhd
+adds16s16.vho
+adds16s16.xco
+adds16s16.xise
+adds16s16_flist.txt
+adds16s16_readme.txt
+adds16s16_xmdf.tcl

@@ -1,0 +1,31 @@
+restart -force
+
+#delete wave *
+-- Ethernet IO Connections
+force -freeze MGTCLK 1 0, 0 {4 ns} -r 8ns
+
+force -freeze Clk119Mhz_in_n	 	1 0, 0 {4.2 ns} -r 8.4ns
+force -freeze Clk119Mhz_in_p	 	0 1, 1 {4.2 ns} -r 8.4ns
+force -freeze Reset 			1 0, 0 100ns
+force -freeze TstrReset 	1 0, 0 100ns
+add wave sim:/testbench/uut/u_clkDet/*
+
+add wave sim:/testbench/uut/Clk119MhzOk
+add wave sim:/testbench/uut/lnk_clk
+add wave sim:/testbench/uut/sysclk
+
+add wave  -radix hex sim:/testbench/u_fadc/*
+add wave -radix hex clk119mhz_in_p clk119mhz_in_n
+add wave -radix hex fadc*
+add wave beam*
+add wave fwd*
+add wave refl*
+add wave -radix hex  sim:/testbench/uut/u_FastADC/u_ad9228/*
+
+add wave fadc_SDIO fadc_sclk n_fadc_cs
+run 1us
+force -freeze sim:/testbench/uut/WFMTrigger 1
+
+run 100ns
+force -freeze sim:/testbench/uut/WFMTrigger 0
+

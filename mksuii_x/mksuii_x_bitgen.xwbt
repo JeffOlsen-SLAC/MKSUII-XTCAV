@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/XilinxShare/XTCAV/xilinx/mksuii_x/mksuii_x.ncd
+OUTFILE=/home/ise/XilinxShare/XTCAV/xilinx/mksuii_x/mksuii_x.bit
+FAMILY=Virtex5
+PART=xc5vlx30t-1ff665
+WORKINGDIR=/home/ise/XilinxShare/XTCAV/xilinx/mksuii_x
+LICENSE=ISE
+USER_INFO=8416_11442_1478797146_620

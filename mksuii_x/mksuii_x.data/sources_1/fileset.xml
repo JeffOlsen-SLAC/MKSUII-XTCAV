@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<DARoots Version="1" Minor="6">
+	<FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+		<Root Path="$PDATADIR/sources_1/ports.xml">
+			<Src SFType="PortsDb"/>
+		</Root>
+		<Root Path="$PDATADIR/sources_1/chipscope.xml">
+			<Src SFType="ChipscopeDb"/>
+		</Root>
+		<Config>
+			<Option Name="DesignMode" Val="PinPlanning"/>
+		</Config>
+	</FileSet>
+</DARoots>
+

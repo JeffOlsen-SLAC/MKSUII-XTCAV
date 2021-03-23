@@ -1,0 +1,15 @@
+# Output products list for <sign32div16>
+_xmsgs\pn_parser.xmsgs
+sign32div16.asy
+sign32div16.gise
+sign32div16.ngc
+sign32div16.sym
+sign32div16.v
+sign32div16.veo
+sign32div16.vhd
+sign32div16.vho
+sign32div16.xco
+sign32div16.xise
+sign32div16_flist.txt
+sign32div16_readme.txt
+sign32div16_xmdf.tcl

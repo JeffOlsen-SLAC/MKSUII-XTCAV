@@ -1,0 +1,10 @@
+Storage Target: BPI Flash Single FPGA
+Storage Family: Virtex5
+8M
+FF
+MKSUII_XTCAV_V550
+/home/ise/XilinxShare/XTCAV/xilinx/mksuii_x/
+
+MCS
+x16
+No

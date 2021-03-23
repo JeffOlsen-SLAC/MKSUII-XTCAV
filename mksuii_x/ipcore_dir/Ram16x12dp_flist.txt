@@ -1,0 +1,17 @@
+# Output products list for <Ram16x12dp>
+Ram16x12dp.asy
+Ram16x12dp.gise
+Ram16x12dp.ngc
+Ram16x12dp.sym
+Ram16x12dp.v
+Ram16x12dp.veo
+Ram16x12dp.vhd
+Ram16x12dp.vho
+Ram16x12dp.xco
+Ram16x12dp.xise
+Ram16x12dp_flist.txt
+Ram16x12dp_readme.txt
+Ram16x12dp_xmdf.tcl
+_xmsgs\pn_parser.xmsgs
+dist_mem_gen_ds322.pdf
+dist_mem_gen_readme.txt

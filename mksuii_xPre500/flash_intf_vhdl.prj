@@ -1,0 +1,5 @@
+vhdl work "\\win.slac.stanford.edu\my storage\groups\cd\eie\projects\linac_upgrade\mksu\mksuii\chassis\xilinx\mksuii_x\ipcore_dir\adds16s16.vhd"
+vhdl work "\\win.slac.stanford.edu\my storage\groups\cd\eie\projects\linac_upgrade\mksu\mksuii\chassis\xilinx\mksuii_x\ipcore_dir\Flash_Fifo_DPRam512x15.vhd"
+vhdl work "\\win.slac.stanford.edu\my storage\groups\cd\eie\projects\linac_upgrade\mksu\mksuii\chassis\xilinx\mksuii_x\ipcore_dir\Flash_Fifo512x16.vhd"
+vhdl work "\\win.slac.stanford.edu\my storage\groups\cd\eie\projects\linac_upgrade\mksu\mksuii\chassis\vhdl\mksuii_x_pkg.vhd"
+vhdl work "\\win.slac.stanford.edu\my storage\groups\cd\eie\projects\linac_upgrade\mksu\mksuii\chassis\vhdl\flash_intf.vhd"

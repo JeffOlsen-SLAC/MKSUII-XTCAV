@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=V:\CD\EIE\projects\XTCAV\MKSUII\chassis\xilinx\mksuii_x\mksuii_x.ncd
+OUTFILE=V:\CD\EIE\projects\XTCAV\MKSUII\chassis\xilinx\mksuii_x\mksuii_x.bit
+FAMILY=Virtex5
+PART=xc5vlx30t-1ff665
+WORKINGDIR=V:\CD\EIE\projects\XTCAV\MKSUII\chassis\xilinx\mksuii_x
+LICENSE=ISE
+USER_INFO=207836092_210175070_210178573_763

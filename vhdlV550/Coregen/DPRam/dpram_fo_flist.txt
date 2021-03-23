@@ -1,0 +1,7 @@
+# Output products list for <dpram_fo>
+dpram_fo.xco
+dpram_fo.vhd
+dpram_fo.vho
+dpram_fo_xmdf.tcl
+dpram_fo_flist.txt
+dpram_fo.ngc

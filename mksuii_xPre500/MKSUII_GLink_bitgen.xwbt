@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=X:\xilinx\mksuii_x\MKSUII_GLink.ncd
+OUTFILE=X:\xilinx\mksuii_x\MKSUII_GLink.bit
+FAMILY=Virtex5
+PART=xc5vlx30t-1ff665
+WORKINGDIR=X:\xilinx\mksuii_x
+LICENSE=ISE
+USER_INFO=174113490_175299295_206270318_840

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<DARoots Version="1" Minor="6">
+	<FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+		<Filter Type="Constrs"/>
+		<Root Path="$PSRCDIR/constrs_1/new/design_netlist_EMPTY.ucf">
+		</Root>
+		<Root Path="$PDATADIR/constrs_1/designprops.xml">
+			<Src SFType="CompatPartsDb"/>
+		</Root>
+		<Root Path="$PDATADIR/constrs_1/usercols.xml">
+			<Src SFType="UserColsDb"/>
+		</Root>
+		<Config>
+			<Option Name="TargetUCF" Val="$PSRCDIR/constrs_1/new/design_netlist_EMPTY.ucf"/>
+			<Option Name="TargetPart" Val="xc5vlx30tff665-1"/>
+		</Config>
+	</FileSet>
+</DARoots>
+

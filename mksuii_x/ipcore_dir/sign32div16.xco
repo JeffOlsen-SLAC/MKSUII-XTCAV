@@ -1,0 +1,36 @@
+##############################################################
+##############################################################
+##############################################################
+SET addpads = false
+SET asysymbol = true
+SET createndf = false
+SET formalverification = false
+SET foundationsym = false
+SET implementationfiletype = Ngc
+SET removerpms = false
+SET simulationfiles = Behavioral
+SET workingdirectory = ./tmp/
+SET designentry = VHDL
+SET BusFormat = BusFormatAngleBracketNotRipped
+SET devicefamily = virtex5
+SET device = xc5vlx30t
+SET package = ff665
+SET speedgrade = -1
+SET FlowVendor = Foundation_ISE
+SET VerilogSim = True
+SET VHDLSim = True
+SELECT Divider_Generator family Xilinx,_Inc. 3.0
+CSET algorithm_type=High_Radix
+CSET ce=false
+CSET clocks_per_division=1
+CSET component_name=sign32div16
+CSET divide_by_zero_detect=false
+CSET dividend_and_quotient_width=32
+CSET divisor_width=16
+CSET fractional_width=0
+CSET latency=25
+CSET latency_configuration=Automatic
+CSET operand_sign=Signed
+CSET remainder_type=Fractional
+CSET sclr=false
+CSET sclr_ce_priority=SCLR_overrides_CE

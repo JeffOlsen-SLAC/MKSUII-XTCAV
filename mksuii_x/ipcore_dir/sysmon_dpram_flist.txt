@@ -1,0 +1,16 @@
+# Output products list for <sysmon_dpram>
+_xmsgs\pn_parser.xmsgs
+dist_mem_gen_ds322.pdf
+dist_mem_gen_readme.txt
+sysmon_dpram.asy
+sysmon_dpram.gise
+sysmon_dpram.ngc
+sysmon_dpram.v
+sysmon_dpram.veo
+sysmon_dpram.vhd
+sysmon_dpram.vho
+sysmon_dpram.xco
+sysmon_dpram.xise
+sysmon_dpram_flist.txt
+sysmon_dpram_readme.txt
+sysmon_dpram_xmdf.tcl

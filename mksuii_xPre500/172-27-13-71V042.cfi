@@ -1,0 +1,11 @@
+# PROMGEN: Xilinx Prom Generator O.61xd
+# Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION O.61xd
+DATE            03/13/2012 - 14:57
+SOURCE          \\win.slac.stanford.edu\my storage\groups\cd\eie\projects\linac_upgrade\mksu\mksuii\chassis\xilinx\mksuii_x\172-27-13-71V042.mcs
+DEVICE          65536K
+DATA_WIDTH      16
+FILL_DATA       0xFF
+SIGNATURE       0xEB3CF7E8
+START_ADDRESS   0x00000000 END_ADDRESS 0x0011DFBF DIRECTION_UP   "//win.slac.stanford.edu/my storage/groups/cd/eie/projects/linac_upgrade/mksu/mksuii/chassis/xilinx/mksuii_x/mksuii_x.bit" 5vlx30tff665

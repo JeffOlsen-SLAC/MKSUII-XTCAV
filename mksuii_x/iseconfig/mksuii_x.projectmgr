@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="mksuii_x" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/FastADCIntf - behaviour V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|FastADCIntf.vhd</ClosedNode>
+         <ClosedNode>/FaultGen - Behaviour V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|FaultGen.vhd</ClosedNode>
+         <ClosedNode>/FaultHistory - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|FaultHistory.vhd</ClosedNode>
+         <ClosedNode>/FrontPanel_Input - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|FrontPanel_Input.vhd</ClosedNode>
+         <ClosedNode>/MKSUII_GLink - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_Glink.vhd/v5_emac_ll - GigaBit_locallink - TOP_LEVEL</ClosedNode>
+         <ClosedNode>/ModCmd - behaviour V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|ModCmd.vhd</ClosedNode>
+         <ClosedNode>/Mon_ADC_Cntl - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|Mon_ADC_Cntl.vhd</ClosedNode>
+         <ClosedNode>/RFDrive - behaviour V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|RFDrive.vhd</ClosedNode>
+         <ClosedNode>/Sled_Intf - behaviour V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|sled_intf.vhd</ClosedNode>
+         <ClosedNode>/Slow_ADC_Cntl - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|Slow_ADC_Cntl.vhd</ClosedNode>
+         <ClosedNode>/SysMon_Intf - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|SysMon_Intf.vhd</ClosedNode>
+         <ClosedNode>/Trigger - behaviour V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|Trigger.vhd</ClosedNode>
+         <ClosedNode>/displayIntf - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|displayIntf.vhd</ClosedNode>
+         <ClosedNode>/flow_intf - behaviour V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|flow_intf.vhd</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_Display - displayIntf - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_FP - FrontPanel_LED - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_FastADC - FastADCIntf - behaviour/u_BeamI - FastChannel - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_FastADC - FastADCIntf - behaviour/u_BeamV - FastChannel - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_FastADC - FastADCIntf - behaviour/u_FWDPWR - FastChannel - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_FastADC - FastADCIntf - behaviour/u_REFLPWR - FastChannel - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_FaultHistory - FaultHistory - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_Flash - flash_intf - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_Flow - flow_intf - behaviour</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_Glink - MKSUII_GLink - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_LocalTrig - LocalTrigger - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_Modintf - ModCmd - behaviour</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_MonADC - Mon_ADC_Cntl - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_RFDrive - RFDrive - behaviour</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_SLOWADC - Slow_ADC_Cntl - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_Sysmon - SysMon_Intf - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_Trigger - Trigger - behaviour</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_fp_In - FrontPanel_Input - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|Chassis|MotherBoard|xilinx|vhdl|mksuii_x.vhd/u_sfp - sfp_intf - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_Display - displayIntf - Behavioral/u_Display - eDipTFT43_intf - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_Display - displayIntf - Behavioral/u_alu - alu - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_FastADC - FastADCIntf - behaviour</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_FastADC - FastADCIntf - behaviour/u_BeamI - FastChannel - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_FastADC - FastADCIntf - behaviour/u_BeamV - FastChannel - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_FastADC - FastADCIntf - behaviour/u_FWDPWR - FastChannel - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_FastADC - FastADCIntf - behaviour/u_REFLPWR - FastChannel - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_FastADC - FastADCIntf - behaviour/u_ad9228 - ad9228Input - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_FaultGen - FaultGen - Behaviour</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_FaultHistory - FaultHistory - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_Flash - flash_intf - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_Flow - flow_intf - behaviour</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_Glink - MKSUII_GLink - Behavioral/v5_emac_ll - GigaBit_locallink - TOP_LEVEL</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_LocalTrig - LocalTrigger - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_MonADC - Mon_ADC_Cntl - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_RFDrive - RFDrive - behaviour</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_SLOWADC - Slow_ADC_Cntl - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_Sysmon - SysMon_Intf - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_Trigger - Trigger - behaviour</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_fp_In - FrontPanel_Input - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_sfp - sfp_intf - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral ||win.slac.stanford.edu|My Storage|Groups|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_Glink - MKSUII_GLink - Behavioral</ClosedNode>
+         <ClosedNode>/mksuii_x - Behavioral ||win.slac.stanford.edu|My Storage|Groups|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|mksuii_x.vhd/u_fp_In - FrontPanel_Input - Behavioral</ClosedNode>
+         <ClosedNode>/sfp_intf - Behavioral V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|sfp_intf.vhd</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>mksuii_x - Behavioral (/home/ise/XilinxShare/XTCAV/xilinx/vhdlV550/mksuii_x.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000002c2000000020000000000000000000000000200000064ffffffff000000810000000300000002000002c20000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>mksuii_x - Behavioral (/home/ise/XilinxShare/XTCAV/xilinx/vhdlV550/mksuii_x.vhd)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>Implement Design/Map</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
+         <ClosedNode>Synthesize - XST</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Manage Configuration Project (iMPACT)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >7</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e5000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e50000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Manage Configuration Project (iMPACT)</CurrentItem>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>glink_intfFixIP.vhd</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >74</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000001000000000000000000000000000000000000074c000000040101000100000000000000000000000064ffffffff000000810000000000000004000001320000000100000000000000d70000000100000000000000660000000100000000000004dd0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>glink_intfFixIP.vhd</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>work</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000128000000010001000100000000000000000000000064ffffffff000000810000000000000001000001280000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>work</CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XCO" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>CORE Generator</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>CORE Generator</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001d9000000010000000100000000000000000000000064ffffffff000000810000000000000001000001d90000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>CORE Generator</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/ad9228tb - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|ad9228tb.vhd</ClosedNode>
+         <ClosedNode>/flash_fifo - flash_fifo_a V:|CD|EIE|projects|XTCAV|MKSUII|chassis|vhdl|Coregen|flash_fifo|flash_fifo.vhd</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/u_tester - MKSUII_GLink - Behavioral</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_Display - displayIntf - Behavioral</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_FastADC - FastADCIntf - behaviour</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_FastADC - FastADCIntf - behaviour/u_BeamI - FastChannel - Behavioral</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_FastADC - FastADCIntf - behaviour/u_BeamV - FastChannel - Behavioral/u_Ave - Ram512x12dp - Ram512x12dp_a</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_FastADC - FastADCIntf - behaviour/u_BeamV - FastChannel - Behavioral/u_Wfm - Ram512x12dp - Ram512x12dp_a</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_FastADC - FastADCIntf - behaviour/u_FWDPWR - FastChannel - Behavioral</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_FastADC - FastADCIntf - behaviour/u_REFLPWR - FastChannel - Behavioral</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_FastADC - FastADCIntf - behaviour/u_ad9228 - ad9228Input - Behavioral</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_FaultHistory - FaultHistory - Behavioral</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_Flow - flow_intf - behaviour</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_Glink - MKSUII_GLink - Behavioral</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_LocalTrig - LocalTrigger - Behavioral</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_MonADC - Mon_ADC_Cntl - Behavioral</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_RFDrive - RFDrive - behaviour</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_SLOWADC - Slow_ADC_Cntl - Behavioral</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_Sysmon - SysMon_Intf - Behavioral</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_Trigger - Trigger - behaviour</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_fp_In - FrontPanel_Input - Behavioral</ClosedNode>
+         <ClosedNode>/testbench - behavior V:|CD|EIE|projects|XTCAV|MKSUII|chassis|xilinx|mksuii_x|mksuii_test.vhd/uut - mksuii_x - Behavioral/u_sfp - sfp_intf - Behavioral</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>mksuii_x - Behavioral (/afs/slac.stanford.edu/u/el/jjo/TidAir/Projects/MKSUII/XTCAV/xilinx/vhdlV550/mksuii_x.vhd)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >12</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000299000000020000000000000000000000000200000064ffffffff000000810000000300000002000002990000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>mksuii_x - Behavioral (/afs/slac.stanford.edu/u/el/jjo/TidAir/Projects/MKSUII/XTCAV/xilinx/vhdlV550/mksuii_x.vhd)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Design Utilities</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000312000000010000000100000000000000000000000064ffffffff000000810000000000000001000003120000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Design Utilities</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000312000000010000000100000000000000000000000064ffffffff000000810000000000000001000003120000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_CDC" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000019c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000019c0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_BMM" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001d9000000010000000100000000000000000000000064ffffffff000000810000000000000001000001d90000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001d2000000010000000100000000000000000000000064ffffffff000000810000000000000001000001d20000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_XCO" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001d9000000010000000100000000000000000000000064ffffffff000000810000000000000001000001d90000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000312000000010000000100000000000000000000000064ffffffff000000810000000000000001000003120000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XAW" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000312000000010000000100000000000000000000000064ffffffff000000810000000000000001000003120000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+</Project>

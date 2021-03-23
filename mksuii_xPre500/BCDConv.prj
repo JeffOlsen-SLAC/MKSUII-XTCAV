@@ -1,0 +1,2 @@
+vhdl work "../../vhdl/digit.vhd"
+vhdl work "../../vhdl/bcdconv.vhd"

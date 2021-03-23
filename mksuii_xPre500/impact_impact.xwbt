@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=V:\CD\EIE\projects\LINAC_UPGRADE\MKSU\MKSUII\chassis\xilinx\mksuii_x\impact.xsl
+OUTFILE=V:\CD\EIE\projects\LINAC_UPGRADE\MKSU\MKSUII\chassis\xilinx\mksuii_x\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=V:\CD\EIE\projects\LINAC_UPGRADE\MKSU\MKSUII\chassis\xilinx\mksuii_x
+LICENSE=iMPACT
+USER_INFO=iMPACT

@@ -1,0 +1,56 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date:    14:40:10 11/16/2010 
+-- Design Name: 
+-- Module Name:    spi_intf - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity spi_intf is
+Port ( 
+	Clock 		: in  STD_LOGIC;
+	Reset 		: in  STD_LOGIC;
+	Data 			: in  std_logic_vector(7 downto 0);
+	Tx_Start 	: in  STD_LOGIC;
+	Tx_Done 		: out  STD_LOGIC;
+	Rx_Start 	: in  STD_LOGIC;
+	Rx_Done 		: out  STD_LOGIC;
+	SPI_SS 		: out  STD_LOGIC;
+	SPI_Clk 		: out  STD_LOGIC;
+	SPI_MOSI 	: out  STD_LOGIC;
+	SPI_MISO 	: in  STD_LOGIC
+);
+end spi_intf;
+
+architecture Behavioral of spi_intf is
+
+constant Clk200Kdiv : std_logic_vector:= x"12C"; -- 300
+
+begin
+
+
+end Behavioral;
+

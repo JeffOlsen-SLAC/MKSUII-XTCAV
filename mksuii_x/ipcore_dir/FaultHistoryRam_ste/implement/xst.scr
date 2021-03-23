@@ -1,0 +1,13 @@
+run
+-ifmt VHDL
+-ent FaultHistoryRam_top
+-p xc5vlx30t-ff665-1
+-ifn xst.prj
+-write_timing_constraints No
+-iobuf YES
+-max_fanout 100
+-ofn FaultHistoryRam_top 
+-ofmt NGC
+-bus_delimiter ()
+-hierarchy_separator /
+-case Maintain

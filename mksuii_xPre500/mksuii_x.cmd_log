@@ -1,0 +1,24 @@
+xst -intstyle ise -ifn "V:/CD/EIE/projects/XTCAV/MKSUII/chassis/xilinx/mksuii_x/mksuii_x.xst" -ofn "V:/CD/EIE/projects/XTCAV/MKSUII/chassis/xilinx/mksuii_x/mksuii_x.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mksuii_x.ucf -bm FADCClkDCM.bmm -p xc5vlx30t-ff665-1 mksuii_x.ngc mksuii_x.ngd  
+map -intstyle ise -p xc5vlx30t-ff665-1 -w -logic_opt off -ol high -xe n -t 1 -register_duplication off -global_opt off -mt off -cm speed -detail -ir off -pr b -lc off -power off -o mksuii_x_map.ncd mksuii_x.ngd mksuii_x.pcf 
+par -w -intstyle ise -ol high -xe n -mt off mksuii_x_map.ncd mksuii_x.ncd mksuii_x.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml mksuii_x.twx mksuii_x.ncd -o mksuii_x.twr mksuii_x.pcf -ucf mksuii_x.ucf 
+bitgen -intstyle ise -f mksuii_x.ut mksuii_x.ncd 
+xst -intstyle ise -ifn "V:/CD/EIE/projects/XTCAV/MKSUII/chassis/xilinx/mksuii_x/mksuii_x.xst" -ofn "V:/CD/EIE/projects/XTCAV/MKSUII/chassis/xilinx/mksuii_x/mksuii_x.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mksuii_x.ucf -bm FADCClkDCM.bmm -p xc5vlx30t-ff665-1 mksuii_x.ngc mksuii_x.ngd  
+map -intstyle ise -p xc5vlx30t-ff665-1 -w -logic_opt off -ol high -xe n -t 1 -register_duplication off -global_opt off -mt off -cm speed -detail -ir off -pr b -lc off -power off -o mksuii_x_map.ncd mksuii_x.ngd mksuii_x.pcf 
+par -w -intstyle ise -ol high -xe n -mt off mksuii_x_map.ncd mksuii_x.ncd mksuii_x.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml mksuii_x.twx mksuii_x.ncd -o mksuii_x.twr mksuii_x.pcf -ucf mksuii_x.ucf 
+bitgen -intstyle ise -f mksuii_x.ut mksuii_x.ncd 
+xst -intstyle ise -ifn "V:/CD/EIE/projects/XTCAV/MKSUII/chassis/xilinx/mksuii_x/mksuii_x.xst" -ofn "V:/CD/EIE/projects/XTCAV/MKSUII/chassis/xilinx/mksuii_x/mksuii_x.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mksuii_x.ucf -bm FADCClkDCM.bmm -p xc5vlx30t-ff665-1 mksuii_x.ngc mksuii_x.ngd  
+map -intstyle ise -p xc5vlx30t-ff665-1 -w -logic_opt off -ol high -xe n -t 1 -register_duplication off -global_opt off -mt off -cm speed -detail -ir off -pr b -lc off -power off -o mksuii_x_map.ncd mksuii_x.ngd mksuii_x.pcf 
+par -w -intstyle ise -ol high -xe n -mt off mksuii_x_map.ncd mksuii_x.ncd mksuii_x.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml mksuii_x.twx mksuii_x.ncd -o mksuii_x.twr mksuii_x.pcf -ucf mksuii_x.ucf 
+bitgen -intstyle ise -f mksuii_x.ut mksuii_x.ncd 
+xst -intstyle ise -ifn "V:/CD/EIE/projects/XTCAV/MKSUII/chassis/xilinx/mksuii_x/mksuii_x.xst" -ofn "V:/CD/EIE/projects/XTCAV/MKSUII/chassis/xilinx/mksuii_x/mksuii_x.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mksuii_x.ucf -bm FADCClkDCM.bmm -p xc5vlx30t-ff665-1 mksuii_x.ngc mksuii_x.ngd  
+map -intstyle ise -p xc5vlx30t-ff665-1 -w -logic_opt off -ol high -xe n -t 1 -register_duplication off -global_opt off -mt off -cm speed -detail -ir off -pr b -lc off -power off -o mksuii_x_map.ncd mksuii_x.ngd mksuii_x.pcf 
+par -w -intstyle ise -ol high -xe n -mt off mksuii_x_map.ncd mksuii_x.ncd mksuii_x.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml mksuii_x.twx mksuii_x.ncd -o mksuii_x.twr mksuii_x.pcf -ucf mksuii_x.ucf 
+bitgen -intstyle ise -f mksuii_x.ut mksuii_x.ncd 

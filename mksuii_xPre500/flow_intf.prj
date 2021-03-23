@@ -1,0 +1,3 @@
+vhdl work "../../vhdl/mksuii_x_pkg.vhd"
+vhdl work "../../vhdl/DeBounce.vhd"
+vhdl work "../../vhdl/flow_intf.vhd"

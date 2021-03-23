@@ -1,0 +1,683 @@
+-----------------------------------------------------------------
+--                                                             --
+-----------------------------------------------------------------
+--
+--	flash_intf.vhd - 
+--
+--	Copyright(c) SLAC 2000
+--
+--	Author: JEFF OLSEN
+--	Created on: 3/24/2010 8:19:56 AM
+--	Last change: JO 10/6/2011 10:14:25 AM
+--
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date:    16:27:10 03/09/2010 
+-- Design Name: 
+-- Module Name:    flash_intf - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.std_logic_1164.ALL;
+use IEEE.std_logic_ARITH.ALL;
+use IEEE.std_logic_UNSIGNED.ALL;
+
+
+Library work;
+use work.HardwareManager.all;
+
+---- Uncomment the following library declaration if instantiating
+---- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity flash_intf is
+Port ( 
+	Clock        	: in std_logic;
+	Reset        	: in std_logic;
+	
+-- Link Interface                                                           
+	Lnk_Addr       : in std_logic_vector(15 downto 0);  
+	Lnk_DataIn     : in std_logic_vector(15 downto 0);
+	Lnk_ReadBlk		: in std_logic;
+	Lnk_EraseBlk	: in std_logic;
+	Lnk_WriteBlk	: in std_logic;
+                                                                            
+	Reg_DataOut   	: out std_logic_vector(15 downto 0);
+
+	
+	Flash_Done		: out std_logic;									-- Requested Flash operation complete
+	Flash_Status	: out std_logic_vector(15 downto 0);		-- Status of the requested Flash operation
+	
+	
+	Flash_We			: out std_logic;
+	Flash_Oe			: out std_logic;
+	Flash_Cs			: out std_logic;
+	Flash_ADV		: out std_logic;
+	Flash_VPP		: out std_logic;
+	Flash_AddrOut	: out std_logic_vector(24 downto 0);
+	Flash_DataIn	: in std_logic_vector(15 downto 0);			-- From Flash Memory
+	Flash_DataOut	: out std_logic_vector(15 downto 0)			-- To Flash Memory
+	
+	);
+end flash_intf;
+
+architecture Behavioral of flash_intf is
+	
+type flash_state_t is 
+(
+	Flash_Idle_s,
+	Get_Partition_s,
+	Get_Block_s,
+	Erase_StatusClr_s,
+	UnLock_Setup_s,
+	UnLock_Confirm_s,
+	Erase_Setup_s,
+	Erase_Confirm_s,
+	Erase_StatusWr_s,
+	Erase_StatusRd_s,
+	Erase_StatusTst_s,
+	Erase_Flash_Wait_s,
+	Erase_Done_s,
+	Erase_Return_Header_s,
+	Erase_Return_Status_s,
+--	Get_BlockLo_s,
+--	Get_BlockHi_s,
+	Write_Fifo_s,
+	Write_Setup_s,
+	Write_Ready_Status_s,
+	Write_Ready_s,
+	Write_ReadyTst_s,
+	Write_Count_s,
+	Write_Rd_Fifo_s,
+	Write_FlashLo_s,
+	Write_FlashHi_s,
+	Write_Confirm_s,
+	Write_Done_Status_s,
+	Write_Done_s,
+	Write_DoneTst_s,
+	Read_Setup_s,
+  	Read_FlashLo_s,
+  	Read_FlashHi_s,
+	Read_LnkOut_Fifo_s,
+	Write_LnkOut_Fifo_s,
+	FWrite_s,
+	FRead_s,
+	Flash_ReadArray_En_s,
+	Boot_s
+);
+
+
+signal Flash_State : flash_state_t;
+signal Return_State : flash_state_t;
+
+signal CycleCntr 			: std_logic_vector(3 downto 0);
+signal Cntr 				: std_logic_vector(7 downto 0);
+signal BlkCntr 			: std_logic_vector(11 downto 0);
+signal BlkAddr 			: std_logic_vector(31 downto 0);
+signal BlkReq	 			: std_logic_vector(15 downto 0);
+signal iF_AddrOut			: std_logic_vector(31 downto 0);
+signal iF_DataOut			: std_logic_vector(15 downto 0);			-- To Flash Memory
+signal iFData	 			: std_logic_vector(15 downto 0);
+
+signal Flash_DataIn32 	: std_logic_vector(31 downto 0);
+signal Flash_Wr_Fifo  	: std_logic;
+signal Lnk_Fifo_Empty  	: std_logic;
+
+signal Lnk_Fifo_DataOut : std_logic_vector(31 downto 0);
+	
+signal Lnk_Wr_Fifo 		: std_logic;
+signal Flash_Fifo_Dout 	: std_logic_vector(31 downto 0);
+signal Flash_Fifo_Rd 	: std_logic;	
+signal TimeoutWCntr 		: std_logic_vector(27 downto 0);
+signal RFF_Reset 			: std_logic;
+signal WFF_Reset 			: std_logic;
+signal Rst_RFF 			: std_logic;
+signal Rst_WFF		 		: std_logic;
+signal Lnk_DataIn32  	: std_logic_vector(31 downto 0);
+signal Flash_Cycle		: std_logic;
+signal iF_DataOutHi 		: std_logic_vector(15 downto 0);
+signal iFlash_Done		: std_logic;
+signal iLnk_DAV			: std_logic;
+signal iDlast				: std_logic;
+signal iRd_Dlast			: std_logic;
+signal iLnk_Mess	 		: std_logic_vector(7 downto 0);
+signal Partition			: std_logic_vector(15 downto 0);
+signal ByteCntr   		: std_logic_vector(3 downto 0);
+signal Lnk_Rd_Fifo		: std_logic;
+signal iLnk_Rd_Fifo		: std_logic;
+signal iFlash_Status		: std_logic_vector(15 downto 0);
+signal Block_Req			: std_logic_vector(7 downto 0);
+
+
+begin
+
+Flash_Status		<= iFlash_Status;
+Flash_AddrOut 		<= iF_AddrOut(24 downto 0);
+Flash_DataOut 		<= iF_DataOut;
+Flash_ADV			<= '1';
+Flash_VPP			<= '1';
+Flash_Done 			<= iFlash_Done;
+Lnk_DAV				<= iLnk_DAV;
+
+RFF_Reset 			<= Reset OR Rst_RFF;
+WFF_Reset 			<= Reset OR Rst_WFF;
+
+
+Read_p : process(Lnk_ReadBlk, iFlash_Status, Lnk_Fifo_DataOut)
+begin
+if ((Lnk_ReadBlk = '0') then
+	Reg_DataOut <= iFlash_Status;
+else
+	Reg_DataOut <= Lnk_Fifo_DataOut;
+end if;
+
+flash_p : process(Clock, Reset)
+Begin
+If (Reset = '1') then
+	Cntr 				<= (Others => '0');
+	Flash_Cycle		<= '0';
+	BlkCntr 			<= (Others => '0');
+	Flash_We			<= '0';
+	Flash_Oe			<= '0';
+	Flash_Cs			<= '0';
+	Rst_WFF			<= '0';		
+	Rst_RFF			<= '0';			
+	iFlash_Status 	<= (Others => '0');
+	iFlash_Done 	<= '0';
+	Flash_Fifo_Rd 	<= '0';
+	Flash_Wr_Fifo	<= '0';
+	Lnk_Wr_Fifo 	<= '0';
+	iLnk_Dav 		<= '0';
+	iF_AddrOut		<= (Others => '0');
+	iF_DataOut		<= (Others => '0');			-- To Flash Memory
+	iF_DataOutHi	<= (Others => '0');
+	Lnk_DataIn32	<= (Others => '0');
+	Flash_DataIn32	<= (Others => '0');
+	TimeoutWCntr 	<= (others => '0');
+	cyclecntr	 	<= (others => '0');
+	ifdata		 	<= (others => '0');
+	blkaddr	 	 	<= (others => '0');
+	Partition		<= (others => '0');
+	Lnk_DataOut		<= (others => '0');
+	ByteCntr 		<= (others => '0');
+	BlkReq	 		<= (others => '0');
+	iRd_Dlast 		<= '0';
+	iLnk_Rd_Fifo	<= '0';
+	Flash_State 	<= Flash_Idle_s;
+elsif (Clock'event and Clock = '1') then
+	if (Rst_WFF = '1') then 
+		Rst_WFF <= '0';
+	end if;
+	
+	if (Rst_RFF = '1') then
+		Rst_RFF <= '0';
+	end if;
+	
+	if (iFlash_Done = '1') then
+		iFlash_Done <= '0';
+	end if;
+	
+	if (iLnk_Dav = '1') then
+		iLnk_Dav <= '0';
+	end if;
+	
+	if (Flash_Wr_Fifo = '1') then
+		Flash_Wr_Fifo <= '0';
+	end if;
+
+	Case Flash_state is
+
+	when Flash_Idle_s =>
+		Rst_WFF			<= '0';			
+		Rst_RFF			<= '0';			
+		iRd_Dlast 		<= '0';
+		if (Lnk_EraseBlk = '1') then
+			BlkAddr 							<= "00000000" & Lnk_Addr & "00000000";
+			Flash_State 					<= Erase_StatusClr_s;
+		elsif (Lnk_WriteBlk = '1') then
+			BlkAddr 							<= "00000000" & Lnk_Addr & "00000000";
+			Lnk_DataIn32(31 downto 16) <= Lnk_DataIn;
+			Cntr 								<= x"001"
+			Flash_State						<= Write_Fifo_s;
+		end if;
+
+
+		if (Lnk_MessStrb = '1') then		
+			ByteCntr 	<= x"0";
+			BlkCntr		<= (Others => '0');
+			if or
+				 (Lnk_Mess = Mess_Flash_Read) or
+				 (Lnk_Mess = Mess_Flash_Write) or 
+				 (lnk_Mess = Mess_Xilinx_Boot)) then
+				ByteCntr 	<= x"0";
+				BlkCntr		<= (Others => '0');
+				BlkAddr		<= (Others => '0');
+				Flash_State <= Get_Partition_s;
+			else
+				Flash_State <= Flash_Idle_s;
+			end if;
+		else
+			Flash_State <= Flash_Idle_s;
+		end if;
+	
+		when Get_Partition_s =>
+		if (Lnk_DataStrb = '1') then
+			if (ByteCntr = x"1") then
+				ByteCntr <= x"0";
+				Case iLnk_Mess is
+					when  Mess_Flash_Erase  =>
+						if (Partition(7 downto 0) < x"04") then
+							BlkAddr <= "0000000000" & Partition(7 downto 0) & "00000000000000";
+						else
+							BlkAddr <= x"00" & (Partition(7 downto 0) - 3) & x"0000";
+						end if;
+						Flash_State 	<= Erase_StatusClr_s;
+					when Mess_Xilinx_Boot =>
+						Flash_State 	<= Boot_s;
+					when others =>
+						Flash_State 	<= Get_Block_s;
+				end case;
+			else
+				ByteCntr 	<= ByteCntr +1;
+				Partition 	<= x"00" & Lnk_DataIn ;
+				Flash_State <= Get_Partition_s;
+			end if;
+		else
+			Flash_State <= Get_Partition_s;
+		end if;
+
+	when Get_Block_s =>
+		if (Lnk_DataStrb = '1') then
+			if (ByteCntr = x"1") then
+				ByteCntr <= x"0";
+				BlkAddr(24 downto 17) 	<= Lnk_DataIn;
+				BlkAddr(31 downto 25) 	<= (others => '0');
+				BlkReq 						<= Lnk_DataIn & blkAddr(16 downto 9);
+				Case iLnk_Mess is
+				when Mess_Flash_Write =>
+					Flash_State 			<= Write_Fifo_s;
+					 
+				when Mess_Flash_Read	=>
+					Rst_WFF 					<= '1';
+					Flash_State 			<= Read_FlashLo_s;
+					
+				When Others => 
+					Flash_State <= Flash_Idle_s;
+				end case;
+			else
+				BlkAddr(8 downto 0) 	<= (others => '0');
+				BlkAddr(16 downto 9) <= Lnk_DataIn;
+				ByteCntr 	<= ByteCntr +1;
+				Flash_State <= Get_Block_s;
+			end if;
+		else
+			Flash_State <= Get_Block_s;
+		end if;
+		
+	when Erase_StatusClr_s =>
+		iF_AddrOut 		<= x"00000000";
+		iF_DataOut		<= FClear_Status;
+		Return_State	<= Unlock_Setup_s;
+		Flash_State		<= FWrite_s;
+		
+	when Unlock_Setup_s =>
+		iF_AddrOut 		<= BlkAddr;
+		iF_DataOut		<= FUnlock_Setup;
+		Return_State 	<= Unlock_Confirm_s;
+		Flash_State 	<= FWrite_s;
+
+	when Unlock_Confirm_s =>
+		iF_AddrOut 		<= BlkAddr;
+		iF_DataOut		<= FUnlock_Confirm;
+		Return_State 	<= Erase_Setup_s;
+		Flash_State 	<= FWrite_s;
+	
+		
+	when Erase_Setup_s =>
+		iF_AddrOut 		<= BlkAddr;
+		iF_DataOut		<= FErase_Setup;
+		Return_State 	<= Erase_Confirm_s;
+		Flash_State 	<= FWrite_s;
+
+	when Erase_Confirm_s =>
+		iF_AddrOut 		<= x"00000000";
+		iF_DataOut		<= FErase_Confirm;
+		Return_State 	<= Erase_StatusWr_s;
+		Flash_State 	<= FWrite_s;
+		
+	when Erase_StatusWr_s =>
+		iF_AddrOut 		<= x"00000000";
+		iF_DataOut		<= FRead_Status;
+		Return_State 	<= Erase_StatusRd_s;
+		Flash_State 	<= FWrite_s;
+
+	when Erase_StatusRd_s =>
+		iF_AddrOut 		<= x"00000000";
+		Return_State 	<= Erase_StatusTst_s;
+		Flash_State 	<= FRead_s;
+		
+	when Erase_StatusTst_s =>
+		TimeoutWCntr <= TimeoutWCntr + 1;
+		if ((iFData AND EraseBlkDone) = EraseBlkDone) then    -- Done set
+			if ((iFData AND EraseBlkErr) /= x"0000") then      -- Errors, quit
+				iFlash_Status	<= iFData;
+				iF_AddrOut 		<= x"00000000";						-- Clear Status
+				iF_DataOut		<= FClear_Status;
+				Return_State	<= Erase_Done_s;
+				Flash_State		<= FWrite_s;
+			else                      									-- No Errors, quit
+				iFlash_Status	<= iFData;
+				Flash_State 	<= Erase_Done_s;
+			end if;
+		elsif (TimeoutWCntr = FlashEraseTOMax) then            -- Never Done, quit with TO
+			iFlash_Status	<= iFData OR FlashEraseTO;
+			iF_AddrOut 		<= x"00000000";							-- Clear Status
+			iF_DataOut		<= FClear_Status;
+			Return_State	<= Erase_Done_s;
+			Flash_State		<= FWrite_s;
+		else                                                  -- Wait for ready
+			Flash_State 	<= Erase_StatusWr_s;		   
+		end if;
+
+	when Erase_Done_s =>
+			Flash_State 	<= Erase_Return_Header_s;
+			
+	when Erase_Return_Header_s =>
+			Flash_State 	<= Erase_Return_Status_s;
+
+	when Erase_Return_Status_s =>
+			iFlash_Status(9) 	<= '1';
+			Flash_State 		<= Flash_ReadArray_En_s;
+
+	when Write_Fifo_s =>
+		if (Lnk_WriteBlk = '1') then
+			BlkCntr 		<= BlkCntr + 1;
+			Lnk_DataIn32(31 downto 16) <= Lnk_DataIn;
+			Lnk_DataIn32(15 downto 0) 	<= Lnk_DataIn32(31 downto 16);
+			if (Cntr = x"001") then
+				Lnk_Wr_Fifo <= '1';
+				Cntr 			<= (others => '0');
+			else
+				Cntr 			<= Cntr + 1;
+			end if;
+				
+			if (BlkCntr = x"3FF") then
+				BlkCntr <= (others => '0');
+				Flash_Fifo_Rd	<= '1';				-- Get First Word from FIFO ready
+				Flash_State 	<= Write_Setup_s;
+			else
+				Flash_State 	<= Write_Fifo_s;
+			end if;
+		else
+		  		Lnk_Wr_Fifo 	<= '0';
+				Flash_State 	<= Write_Fifo_s;
+		end if;	
+			
+	when Write_Setup_s =>
+		Lnk_Wr_Fifo 	<= '0';
+		TimeoutWCntr 	<= (Others => '0');		
+		Flash_Fifo_Rd	<= '0';				
+		iF_AddrOut 		<= BlkAddr;
+		iF_DataOut		<= FWrite_Setup;
+		Return_State 	<= Write_Ready_Status_s;
+		Flash_State 	<= FWrite_s;
+	
+	when Write_Ready_Status_s =>
+		TimeoutWCntr 	<= TimeoutWCntr + 1;		
+		iF_AddrOut 		<= BlkAddr;
+		iF_DataOut		<= FRead_Status;
+		Return_State 	<= Write_Ready_s;
+		Flash_State 	<= FWrite_s;
+	
+	when Write_Ready_s =>
+		iF_AddrOut 		<= BlkAddr;
+		iF_DataOut		<= FRead_Status;
+		Return_State 	<= Write_ReadyTst_s;
+		Flash_State 	<= FRead_s;
+		
+	when Write_ReadyTst_s =>
+		if ((iFData AND WriteBlkRdy) = WriteBlkRdy) then
+			Flash_State 	<= Write_Count_s;
+		elsif (TimeoutWCntr = FlashWriteRdyTOMax) then        -- Never Done, quit with TO
+			iFlash_Status 	<= IFData OR FlashWriteRdyTO;
+			Rst_WFF			<= '1';										-- Clear FIFO
+			iF_AddrOut 		<= x"00000000";							-- Clear Status
+			iF_DataOut		<= FClear_Status;
+			Return_State	<= Flash_ReadArray_En_s;
+			Flash_State		<= FWrite_s;
+		else
+			Flash_State 	<= Write_Ready_Status_s;
+		end if;	
+	
+	when Write_Count_s =>
+		iF_AddrOut 		<= BlkAddr;
+		iF_DataOut		<= x"001F";
+		Cntr				<= x"00";
+		Return_State 	<= Write_Rd_Fifo_s;
+		Flash_State 	<= FWrite_s;
+	
+	when Write_Rd_Fifo_s =>
+		If (Cntr = x"20") then
+			Cntr 				<= x"00";
+			Flash_State 	<= Write_Confirm_s;
+		else
+			Flash_Fifo_Rd	<= '1';
+			Flash_State 	<= Write_FlashLo_s;
+		end if;
+	
+	when Write_FlashLo_s =>
+		Flash_Fifo_Rd	<= '0';
+		Cntr 				<= Cntr + 1;	
+		iF_AddrOut		<= BlkAddr;
+		BlkAddr 			<= BlkAddr + 1;
+		iF_DataOut		<= Flash_Fifo_Dout(15 downto 0);
+		iF_DataOutHi 	<= Flash_Fifo_Dout(31 downto 16);
+		Return_State 	<= Write_FlashHi_s;
+      Flash_State 	<= FWrite_S;
+		
+	when Write_FlashHi_s =>
+		Cntr 				<= Cntr + 1;
+		iF_AddrOut		<= BlkAddr;
+		BlkAddr 			<= BlkAddr + 1;
+		iF_DataOut		<= iF_DataOutHi;
+		Return_State 	<= Write_Rd_Fifo_s;
+		Flash_State 	<= FWrite_s;
+	
+	when Write_Confirm_s =>
+		iF_AddrOut		<= BlkAddr;
+		iF_DataOut		<= FWrite_Confirm;
+		Return_State 	<= Write_Done_Status_s;
+		Flash_State 	<= FWrite_s;
+	
+	when Write_Done_Status_s =>
+		TimeoutWCntr 	<= TimeoutWCntr + 1;		
+		iF_AddrOut 		<= BlkAddr;
+		iF_DataOut		<= FRead_Status;
+		Return_State 	<= Write_Done_s;
+		Flash_State 	<= FWrite_s;
+	
+	when Write_Done_s =>
+		iF_AddrOut 		<= BlkAddr;
+		iF_DataOut		<= FRead_Status;
+		Return_State 	<= Write_DoneTst_s;
+		Flash_State 	<= FRead_s;
+		
+	when Write_DoneTst_s =>
+		if ((iFData AND WriteBlkDone) = WriteBlkDone) then
+			BlkCntr <= BlkCntr + 1;
+			if (BlkCntr = x"00F") then										-- Done
+				iFlash_Status	<= IFData;
+				Flash_State		<= Flash_ReadArray_En_s;
+			else
+				Flash_State		<= Write_Setup_s;
+			end if;
+		elsif (TimeoutWCntr = FlashWriteRdyTOMax) then           -- Never Done, quit with TO
+			iFlash_Status 	<= IFData OR FlashWriteRdyTO;
+			Rst_WFF			<= '1';											-- Clear FIFO
+			iF_AddrOut 		<= x"00000000";								-- Clear Status
+			iF_DataOut		<= FClear_Status;
+			Return_State	<= Flash_ReadArray_En_s;
+			Flash_State		<= FWrite_s;
+		else
+			Flash_State 	<= Write_Done_Status_s;
+		end if;		
+	
+	when Flash_ReadArray_En_s =>
+		iFlash_Done		<= '1';
+		iF_AddrOut 		<= x"00000000";								-- Enable Read Array
+		iF_DataOut		<= FRead_ArrayEn;
+		Return_State	<= Flash_Idle_s;
+		Flash_State		<= FWrite_s;
+
+	when Read_Setup_s =>
+		Rst_RFF			<= '1';
+		iF_AddrOut 		<= x"00000000";								-- Enable Read Array
+		iF_DataOut		<= FRead_ArrayEn;
+		BlkCntr			<= (Others => '0');
+		Return_State	<= Read_FlashLo_s;
+		Flash_State		<= FWrite_s;
+		
+	When Read_FlashLo_s =>
+		iF_AddrOut		<= BlkAddr;
+		BlkAddr 			<= BlkAddr + 1;
+		Return_State	<= Read_FlashHi_s;
+		Flash_State		<= FRead_s;
+		
+	When Read_FlashHi_s =>
+		Flash_DataIn32(15 downto 0) <= IFData;
+		iF_AddrOut		<= BlkAddr;
+		BlkAddr 			<= BlkAddr + 1;
+		Return_State	<= Write_LnkOut_Fifo_s;
+		Flash_State		<= FRead_s;
+		
+	when Write_LnkOut_Fifo_s =>
+		iF_addrOut  <= BlkAddr;
+		Flash_DataIn32(31 downto 16) <= IFData;	
+		Flash_Wr_Fifo <= '1';
+		if (BlkCntr = x"100") then
+--		if (BlkCntr = x"005") then
+			iLnk_DAV		<= '1';
+			BlkCntr 		<= x"000";
+			iLnk_Rd_Fifo <= '1';
+			Lnk_DataOut <= Partition & BlkReq;
+			Flash_State	<= Read_LnkOut_Fifo_s;
+		else
+			BlkCntr <= BlkCntr +1;
+			Flash_State	<= Read_FlashLo_s;
+		end if;
+		
+	when Read_LnkOut_Fifo_s =>
+		Flash_Wr_Fifo 	<= '0';
+		iLnk_Rd_Fifo 	<= '0';
+
+		if (Lnk_Rd = '1') then
+			Lnk_DataOut 		<= Lnk_Fifo_DataOut;
+			if (BlkCntr = x"100") then
+				iRd_Dlast		<= '1';
+				Flash_State		<= Flash_Idle_s;
+			else
+				BlkCntr 			<= BlkCntr + 1;
+				Flash_State		<= Read_LnkOut_Fifo_s;
+			end if;
+		else
+			Flash_State		<= Read_LnkOut_Fifo_s;
+		end if;
+				
+	when FWrite_s => 
+		Flash_Oe		<= '0';
+		if (Flash_Cycle = '0') then
+			CycleCntr	<= x"0";
+			Flash_Cycle <= '1';
+		else
+			CycleCntr 	<= CycleCntr + 1;
+		end if;
+		if (CycleCntr = x"0") then
+			Flash_WE		<= '1';
+			Flash_Cs 	<= '1';
+			Flash_State <= Fwrite_s;
+		elsif (CycleCntr = x"7") then  
+			Flash_WE		<= '0';
+			Flash_Cs 	<= '0';
+			Flash_State <= Fwrite_s;
+		elsif (CycleCntr = x"B") then  
+			Flash_Cycle <= '0';
+			Flash_State <= Return_State;
+		end if;
+
+	when FRead_s => 
+		Flash_We	<= '0';
+		if (Flash_Cycle = '0') then
+			CycleCntr	<= x"0";
+			Flash_Cycle <= '1';
+		else
+			CycleCntr 		<= CycleCntr + 1;
+		end if;
+		if (CycleCntr = x"0") then
+			Flash_OE		<= '1';
+			Flash_Cs 	<= '1';
+			Flash_State <= FRead_s;
+		elsif (CycleCntr = x"C") then 
+			Flash_State <= FRead_s;
+			iFData 		<= Flash_DataIn;
+		elsif (CycleCntr = x"D") then 
+			Flash_OE		<= '0';
+			Flash_Cs 	<= '0';
+			Flash_State <= FRead_s;
+		elsif (CycleCntr = x"F") then 
+			Flash_Cycle <= '0';
+			Flash_State <= Return_State;
+		end if;	
+		
+	when Boot_s => 
+		Flash_State <= Flash_Idle_s;
+		
+	when Others => 
+		Flash_State <= Flash_Idle_s;
+			
+	end case;
+end if;
+end process;
+
+Lnk_Rd_Fifo <= iLnk_Rd_Fifo OR Lnk_Rd;
+
+Fifo_WriteFifo : flash_fifo  -- Data store from Lnk to Flash
+port map (
+	rst 		=> WFF_Reset,
+	clk 		=> Clock,
+	din 		=> Lnk_DataIn32,
+	wr_en 	=> Lnk_Wr_Fifo,
+	dout 		=> Flash_Fifo_Dout,
+	rd_en 	=> Flash_Fifo_Rd,
+	empty 	=> open,
+	full 		=> open
+	);
+
+Fifo_ReadFifo : flash_fifo  -- Data store from Flash to Link
+port map (
+	rst 		=> RFF_Reset,
+	clk 		=> Clock,
+	din 		=> Flash_DataIn32,
+	wr_en 	=> Flash_Wr_Fifo,
+	dout 		=> Lnk_Fifo_DataOut,
+	rd_en 	=> Lnk_Rd_Fifo,
+	empty 	=> Lnk_Fifo_Empty,
+	full 		=> open
+	);
+	
+
+
+end Behavioral;
+

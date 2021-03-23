@@ -1,0 +1,6 @@
+vhdl work "\\win.slac.stanford.edu\my storage\groups\cd\eie\projects\linac_upgrade\mksu\mksuii\chassis\xilinx\mksuii_x\ipcore_dir\Ram16x16dp.vhd"
+vhdl work "\\win.slac.stanford.edu\my storage\groups\cd\eie\projects\linac_upgrade\mksu\mksuii\chassis\xilinx\mksuii_x\ipcore_dir\ram16x16.vhd"
+vhdl work "\\win.slac.stanford.edu\my storage\groups\cd\eie\projects\linac_upgrade\mksu\mksuii\chassis\vhdl\ThresComp.vhd"
+vhdl work "\\win.slac.stanford.edu\my storage\groups\cd\eie\projects\linac_upgrade\mksu\mksuii\chassis\vhdl\mksuii_x_pkg.vhd"
+vhdl work "\\win.slac.stanford.edu\my storage\groups\cd\eie\projects\linac_upgrade\mksu\mksuii\chassis\vhdl\max1308Intf.vhd"
+vhdl work "\\win.slac.stanford.edu\my storage\groups\cd\eie\projects\linac_upgrade\mksu\mksuii\chassis\vhdl\Mon_ADC_Cntl.vhd"

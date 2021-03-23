@@ -1,0 +1,1 @@
+vhdtdtfi -prj mksuii_x -o X:/xilinx/mksuii_x/RFDrive.vhi -module RFDrive -template C:/Xilinx/13.1/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ipcore_dir/adds16s16.vhd -lib work ipcore_dir/Drive_Lkup.vhd -lib work ../../vhdl/mksuii_x_pkg.vhd -lib work ../../vhdl/RFDrive.vhd 

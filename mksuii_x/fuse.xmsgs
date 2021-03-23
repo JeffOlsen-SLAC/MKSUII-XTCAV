@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="89" delta="unknown" >"/afs/slac.stanford.edu/u/el/jjo/TidAir/Projects/MKSUII/XTCAV/xilinx/mksuii_x/../vhdlV550/mksuii_Glink.vhd" Line 178: &lt;<arg fmt="%s" index="1">gigabit_locallink</arg>&gt; remains a black-box since it has no binding entity.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="89" delta="unknown" >"/afs/slac.stanford.edu/u/el/jjo/TidAir/Projects/MKSUII/XTCAV/xilinx/mksuii_x/../vhdlV550/mksuii_x.vhd" Line 1369: &lt;<arg fmt="%s" index="1">frontpanel_led</arg>&gt; remains a black-box since it has no binding entity.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="89" delta="unknown" >"/afs/slac.stanford.edu/u/el/jjo/TidAir/Projects/MKSUII/XTCAV/xilinx/mksuii_x/../vhdlV550/sfp_intf.vhd" Line 483: &lt;<arg fmt="%s" index="1">dpram_fo</arg>&gt; remains a black-box since it has no binding entity.
+</msg>
+
+<msg type="warning" file="Simulator" num="648" delta="unknown" >&quot;<arg fmt="%s" index="1">/afs/slac.stanford.edu/u/el/jjo/TidAir/Projects/MKSUII/XTCAV/xilinx/mksuii_x/../vhdlV550/mksuii_Glink.vhd</arg>&quot; Line <arg fmt="%d" index="2">178</arg>. Instance <arg fmt="%s" index="3">gigabit_locallink</arg> is unbound
+</msg>
+
+<msg type="warning" file="Simulator" num="648" delta="unknown" >&quot;<arg fmt="%s" index="1">/afs/slac.stanford.edu/u/el/jjo/TidAir/Projects/MKSUII/XTCAV/xilinx/mksuii_x/../vhdlV550/mksuii_x.vhd</arg>&quot; Line <arg fmt="%d" index="2">1369</arg>. Instance <arg fmt="%s" index="3">frontpanel_led</arg> is unbound
+</msg>
+
+<msg type="warning" file="Simulator" num="648" delta="unknown" >&quot;<arg fmt="%s" index="1">/afs/slac.stanford.edu/u/el/jjo/TidAir/Projects/MKSUII/XTCAV/xilinx/mksuii_x/../vhdlV550/sfp_intf.vhd</arg>&quot; Line <arg fmt="%d" index="2">483</arg>. Instance <arg fmt="%s" index="3">dpram_fo</arg> is unbound
+</msg>
+
+</messages>
+

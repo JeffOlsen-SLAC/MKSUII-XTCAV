@@ -1,0 +1,20 @@
+Release 14.7 Drc P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Mon Mar 22 17:33:16 2021
+
+drc -z mksuii_x.ncd mksuii_x.pcf
+
+WARNING:PhysDesignRules:1841 - One or more GTPs are being used in this design.
+   Evaluate the SelectIO-To-GTP Crosstalk section of the Virtex-5 RocketIO GTP
+   Transceiver User Guide to ensure that the design SelectIO usage meets the
+   guidelines to minimize the impact on GTP performance. 
+WARNING:PhysDesignRules:1441 - Issue with pin connections and/or configuration
+   on block:<u_FastADC/u_ad9228/u_FrameClkIn/BEAM_Viddr>:<ILOGIC_IFF>.  The
+   IFFTYPE is DDR and the Q2 output pin of IFF is not used.
+WARNING:PhysDesignRules:1275 - Issue with pin connections and/or configuration
+   on block:<u_FastADC/u_ad9228/u_FrameClkIn/BEAM_Viddr>:<ILOGIC_IFF>.  The SR
+   pin is used for the IFF Flip-flop but the SRVAL_Q2 set/reset value is not
+   configured.
+DRC detected 0 errors and 3 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

@@ -1,0 +1,214 @@
+# Current time Thu May 19 13:38:40 2011
+# ModelSim Stack Trace
+# Program = vsim
+# Id = "10.0a"
+# Version = "2011.02"
+# Date = "Feb 20 2011"
+# Platform = win32pe
+# 0    0x009609b7: '<unknown (@0x9609b7)>'
+# 1    0x0064b60a: '<unknown (@0x64b60a)>'
+# 2    0x0064d99d: '<unknown (@0x64d99d)>'
+# 3    0x0088dec1: '<unknown (@0x88dec1)>'
+# 4    0x1000bdd4: 'TclInvokeStringCommand + 0x74' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 5    0x1000c770: 'TclEvalObjvInternal + 0x230' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 6    0x1002d7bb: 'TclExprFloatError + 0x10eb' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 7    0x1002bc79: 'TclCompEvalObj + 0xd9' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 8    0x1000efc6: 'Tcl_EvalObjEx + 0x56' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 9    0x100116f5: 'Tcl_CatchObjCmd + 0x45' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 10   0x1000c770: 'TclEvalObjvInternal + 0x230' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 11   0x1002d7bb: 'TclExprFloatError + 0x10eb' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 12   0x1002baea: 'Tcl_ExprObj + 0x3ca' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 13   0x1000d0b7: 'Tcl_ExprBooleanObj + 0x17' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 14   0x100140ff: 'Tcl_IfObjCmd + 0x3f' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 15   0x1000c770: 'TclEvalObjvInternal + 0x230' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 16   0x1000dd77: 'Tcl_EvalEx + 0x167' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 17   0x1000e0d6: 'Tcl_Eval + 0x16' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 18   0x1000e53c: 'Tcl_GlobalEval + 0x1c' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 19   0x0096f54d: '<unknown (@0x96f54d)>'
+# 20   0x1003b375: 'Tcl_NotifyChannel + 0xd5' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 21   0x1006b4dd: 'TclpCreateProcess + 0xced' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 22   0x1004aed0: 'Tcl_ServiceEvent + 0x60' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 23   0x1004b11e: 'Tcl_DoOneEvent + 0x10e' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 24   0x00a742cc: '<unknown (@0xa742cc)>'
+# 25   0x00729c21: '<unknown (@0x729c21)>'
+# End of Stack Trace
+
+
+# Current time Tue May 31 09:09:07 2011
+# ModelSim Stack Trace
+# Program = vsim
+# Id = "10.0a"
+# Version = "2011.02"
+# Date = "Feb 20 2011"
+# Platform = win32pe
+# 0    0x009609b7: '<unknown (@0x9609b7)>'
+# 1    0x0064b60a: '<unknown (@0x64b60a)>'
+# 2    0x0064d99d: '<unknown (@0x64d99d)>'
+# 3    0x0088dec1: '<unknown (@0x88dec1)>'
+# 4    0x1000bdd4: 'TclInvokeStringCommand + 0x74' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 5    0x1000c770: 'TclEvalObjvInternal + 0x230' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 6    0x1002d7bb: 'TclExprFloatError + 0x10eb' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 7    0x1002bc79: 'TclCompEvalObj + 0xd9' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 8    0x1000efc6: 'Tcl_EvalObjEx + 0x56' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 9    0x100116f5: 'Tcl_CatchObjCmd + 0x45' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 10   0x1000c770: 'TclEvalObjvInternal + 0x230' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 11   0x1002d7bb: 'TclExprFloatError + 0x10eb' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 12   0x1002baea: 'Tcl_ExprObj + 0x3ca' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 13   0x1000d0b7: 'Tcl_ExprBooleanObj + 0x17' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 14   0x100140ff: 'Tcl_IfObjCmd + 0x3f' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 15   0x1000c770: 'TclEvalObjvInternal + 0x230' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 16   0x1000dd77: 'Tcl_EvalEx + 0x167' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 17   0x1000e0d6: 'Tcl_Eval + 0x16' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 18   0x1000e53c: 'Tcl_GlobalEval + 0x1c' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 19   0x0096f54d: '<unknown (@0x96f54d)>'
+# 20   0x1003b375: 'Tcl_NotifyChannel + 0xd5' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 21   0x1006b4dd: 'TclpCreateProcess + 0xced' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 22   0x1004aed0: 'Tcl_ServiceEvent + 0x60' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 23   0x1004b11e: 'Tcl_DoOneEvent + 0x10e' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 24   0x00a742cc: '<unknown (@0xa742cc)>'
+# 25   0x00729c21: '<unknown (@0x729c21)>'
+# End of Stack Trace
+
+
+# Current time Tue May 31 13:14:48 2011
+# ModelSim Stack Trace
+# Program = vsim
+# Id = "10.0a"
+# Version = "2011.02"
+# Date = "Feb 20 2011"
+# Platform = win32pe
+# 0    0x009609b7: '<unknown (@0x9609b7)>'
+# 1    0x0064b60a: '<unknown (@0x64b60a)>'
+# 2    0x0064d99d: '<unknown (@0x64d99d)>'
+# 3    0x0088dec1: '<unknown (@0x88dec1)>'
+# 4    0x1000bdd4: 'TclInvokeStringCommand + 0x74' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 5    0x1000c770: 'TclEvalObjvInternal + 0x230' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 6    0x1002d7bb: 'TclExprFloatError + 0x10eb' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 7    0x1002bc79: 'TclCompEvalObj + 0xd9' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 8    0x1000efc6: 'Tcl_EvalObjEx + 0x56' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 9    0x100116f5: 'Tcl_CatchObjCmd + 0x45' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 10   0x1000c770: 'TclEvalObjvInternal + 0x230' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 11   0x1002d7bb: 'TclExprFloatError + 0x10eb' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 12   0x1002baea: 'Tcl_ExprObj + 0x3ca' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 13   0x1000d0b7: 'Tcl_ExprBooleanObj + 0x17' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 14   0x100140ff: 'Tcl_IfObjCmd + 0x3f' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 15   0x1000c770: 'TclEvalObjvInternal + 0x230' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 16   0x1000dd77: 'Tcl_EvalEx + 0x167' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 17   0x1000e0d6: 'Tcl_Eval + 0x16' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 18   0x1000e53c: 'Tcl_GlobalEval + 0x1c' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 19   0x0096f54d: '<unknown (@0x96f54d)>'
+# 20   0x1003b375: 'Tcl_NotifyChannel + 0xd5' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 21   0x1006b4dd: 'TclpCreateProcess + 0xced' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 22   0x1004aed0: 'Tcl_ServiceEvent + 0x60' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 23   0x1004b11e: 'Tcl_DoOneEvent + 0x10e' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 24   0x00a742cc: '<unknown (@0xa742cc)>'
+# 25   0x00729c21: '<unknown (@0x729c21)>'
+# End of Stack Trace
+
+
+# Current time Thu Jun 02 13:28:57 2011
+# ModelSim Stack Trace
+# Program = vsim
+# Id = "10.0a"
+# Version = "2011.02"
+# Date = "Feb 20 2011"
+# Platform = win32pe
+# 0    0x009609b7: '<unknown (@0x9609b7)>'
+# 1    0x0064b60a: '<unknown (@0x64b60a)>'
+# 2    0x0064d99d: '<unknown (@0x64d99d)>'
+# 3    0x0088dec1: '<unknown (@0x88dec1)>'
+# 4    0x1000bdd4: 'TclInvokeStringCommand + 0x74' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 5    0x1000c770: 'TclEvalObjvInternal + 0x230' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 6    0x1002d7bb: 'TclExprFloatError + 0x10eb' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 7    0x1002bc79: 'TclCompEvalObj + 0xd9' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 8    0x1000efc6: 'Tcl_EvalObjEx + 0x56' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 9    0x100116f5: 'Tcl_CatchObjCmd + 0x45' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 10   0x1000c770: 'TclEvalObjvInternal + 0x230' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 11   0x1002d7bb: 'TclExprFloatError + 0x10eb' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 12   0x1002baea: 'Tcl_ExprObj + 0x3ca' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 13   0x1000d0b7: 'Tcl_ExprBooleanObj + 0x17' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 14   0x100140ff: 'Tcl_IfObjCmd + 0x3f' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 15   0x1000c770: 'TclEvalObjvInternal + 0x230' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 16   0x1000dd77: 'Tcl_EvalEx + 0x167' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 17   0x1000e0d6: 'Tcl_Eval + 0x16' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 18   0x1000e53c: 'Tcl_GlobalEval + 0x1c' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 19   0x0096f54d: '<unknown (@0x96f54d)>'
+# 20   0x1003b375: 'Tcl_NotifyChannel + 0xd5' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 21   0x1006b4dd: 'TclpCreateProcess + 0xced' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 22   0x1004aed0: 'Tcl_ServiceEvent + 0x60' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 23   0x1004b11e: 'Tcl_DoOneEvent + 0x10e' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 24   0x00a742cc: '<unknown (@0xa742cc)>'
+# 25   0x00729c21: '<unknown (@0x729c21)>'
+# End of Stack Trace
+
+
+# Current time Tue Jun 28 13:15:28 2011
+# ModelSim Stack Trace
+# Program = vsim
+# Id = "10.0a"
+# Version = "2011.02"
+# Date = "Feb 20 2011"
+# Platform = win32pe
+# 0    0x00905561: '<unknown (@0x905561)>'
+# 1    0x0088dec1: '<unknown (@0x88dec1)>'
+# 2    0x1000bdd4: 'TclInvokeStringCommand + 0x74' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 3    0x1000c770: 'TclEvalObjvInternal + 0x230' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 4    0x1002d7bb: 'TclExprFloatError + 0x10eb' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 5    0x1002bc79: 'TclCompEvalObj + 0xd9' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 6    0x1000efc6: 'Tcl_EvalObjEx + 0x56' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 7    0x100116f5: 'Tcl_CatchObjCmd + 0x45' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 8    0x1000c770: 'TclEvalObjvInternal + 0x230' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 9    0x1002d7bb: 'TclExprFloatError + 0x10eb' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 10   0x1002baea: 'Tcl_ExprObj + 0x3ca' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 11   0x1000d0b7: 'Tcl_ExprBooleanObj + 0x17' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 12   0x100140ff: 'Tcl_IfObjCmd + 0x3f' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 13   0x1000c770: 'TclEvalObjvInternal + 0x230' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 14   0x1000dd77: 'Tcl_EvalEx + 0x167' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 15   0x1000e0d6: 'Tcl_Eval + 0x16' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 16   0x1000e53c: 'Tcl_GlobalEval + 0x1c' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 17   0x0096f54d: '<unknown (@0x96f54d)>'
+# 18   0x1003b375: 'Tcl_NotifyChannel + 0xd5' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 19   0x1006b4dd: 'TclpCreateProcess + 0xced' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 20   0x1004aed0: 'Tcl_ServiceEvent + 0x60' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 21   0x1004b11e: 'Tcl_DoOneEvent + 0x10e' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 22   0x00a742cc: '<unknown (@0xa742cc)>'
+# 23   0x00729c21: '<unknown (@0x729c21)>'
+# End of Stack Trace
+
+
+# Current time Fri Jul 01 12:48:41 2011
+# ModelSim Stack Trace
+# Program = vsim
+# Id = "10.0a"
+# Version = "2011.02"
+# Date = "Feb 20 2011"
+# Platform = win32pe
+# 0    0x009609b7: '<unknown (@0x9609b7)>'
+# 1    0x0064b60a: '<unknown (@0x64b60a)>'
+# 2    0x0064d99d: '<unknown (@0x64d99d)>'
+# 3    0x0088dec1: '<unknown (@0x88dec1)>'
+# 4    0x1000bdd4: 'TclInvokeStringCommand + 0x74' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 5    0x1000c770: 'TclEvalObjvInternal + 0x230' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 6    0x1002d7bb: 'TclExprFloatError + 0x10eb' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 7    0x1002bc79: 'TclCompEvalObj + 0xd9' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 8    0x1000efc6: 'Tcl_EvalObjEx + 0x56' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 9    0x100116f5: 'Tcl_CatchObjCmd + 0x45' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 10   0x1000c770: 'TclEvalObjvInternal + 0x230' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 11   0x1002d7bb: 'TclExprFloatError + 0x10eb' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 12   0x1002baea: 'Tcl_ExprObj + 0x3ca' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 13   0x1000d0b7: 'Tcl_ExprBooleanObj + 0x17' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 14   0x100140ff: 'Tcl_IfObjCmd + 0x3f' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 15   0x1000c770: 'TclEvalObjvInternal + 0x230' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 16   0x1000dd77: 'Tcl_EvalEx + 0x167' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 17   0x1000e0d6: 'Tcl_Eval + 0x16' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 18   0x1000e53c: 'Tcl_GlobalEval + 0x1c' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 19   0x0096f54d: '<unknown (@0x96f54d)>'
+# 20   0x1003b375: 'Tcl_NotifyChannel + 0xd5' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 21   0x1006b4dd: 'TclpCreateProcess + 0xced' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 22   0x1004aed0: 'Tcl_ServiceEvent + 0x60' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 23   0x1004b11e: 'Tcl_DoOneEvent + 0x10e' in 'c:\modeltech_pe_10.0a\win32pe\tcl84.dll'
+# 24   0x00a742cc: '<unknown (@0xa742cc)>'
+# 25   0x00729c21: '<unknown (@0x729c21)>'
+# End of Stack Trace
+
+

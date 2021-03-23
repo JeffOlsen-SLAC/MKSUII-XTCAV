@@ -1,0 +1,27 @@
+Address
+0
+i32
+Design Name
+0
+s
+Flash Data Width
+8
+s
+Multiboot Bpi Chain
+PARALLEL
+s
+Multiboot Bpi Device
+VIRTEX5
+s
+Multiboot Bpi Type
+TYPE_BPI
+s
+NumberOfChains
+1
+i32
+RSPin
+00
+s
+RSPin Msb
+1
+s

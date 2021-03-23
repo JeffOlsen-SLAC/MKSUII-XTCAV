@@ -1,0 +1,2 @@
+vhdl work "../../vhdl/mksuiiFixedIP_x_pkg.vhd"
+vhdl work "../../vhdl/TempADC.vhd"

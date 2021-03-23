@@ -1,0 +1,10 @@
+Storage Target: BPI Flash Single FPGA
+Storage Family: Virtex5
+64M
+FF
+mksuii_xV01
+X:\xilinx\mksuii_x\
+
+MCS
+x16
+No

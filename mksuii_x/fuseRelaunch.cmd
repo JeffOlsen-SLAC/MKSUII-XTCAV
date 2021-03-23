@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/afs/slac.stanford.edu/u/el/jjo/TidAir/Projects/MKSUII/XTCAV/xilinx/mksuii_x/mksuii_x_isim_beh.exe" -prj "/afs/slac.stanford.edu/u/el/jjo/TidAir/Projects/MKSUII/XTCAV/xilinx/mksuii_x/mksuii_x_beh.prj" "work.mksuii_x" 

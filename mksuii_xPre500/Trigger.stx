@@ -1,0 +1,39 @@
+Release 12.2 - xst M.63c (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/vhdl/mksuii_x_pkg.vhd" in Library work.
+Compiling vhdl file "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/vhdl/prog_strobe16.vhd" in Library work.
+Entity <prog_strobe16> compiled.
+Entity <prog_strobe16> (Architecture <Behaviour>) compiled.
+Compiling vhdl file "//slac/my storage/groups/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/vhdl/Trigger.vhd" in Library work.
+Entity <Trigger> compiled.
+Entity <Trigger> (Architecture <behaviour>) compiled.
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.67 secs
+ 
+--> 
+
+Total memory usage is 119404 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

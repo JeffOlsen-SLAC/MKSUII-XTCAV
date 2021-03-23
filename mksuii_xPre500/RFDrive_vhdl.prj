@@ -1,0 +1,4 @@
+vhdl work "\\slac\my storage\groups\CD\EIE\projects\LINAC_UPGRADE\MKSU\MKSUII\chassis\xilinx\mksuii_x\ipcore_dir\adds16s16.vhd"
+vhdl work "\\slac\my storage\groups\CD\EIE\projects\LINAC_UPGRADE\MKSU\MKSUII\chassis\xilinx\mksuii_x\ipcore_dir\RFDriveDPMem.vhd"
+vhdl work "\\slac\my storage\groups\CD\EIE\projects\LINAC_UPGRADE\MKSU\MKSUII\chassis\vhdl\mksuiiFixedIP_x_pkg.vhd"
+vhdl work "\\slac\my storage\groups\CD\EIE\projects\LINAC_UPGRADE\MKSU\MKSUII\chassis\vhdl\RFDrive.vhd"

@@ -1,0 +1,5 @@
+set -tmpdir "V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/xst/projnav.tmp"
+set -xsthdpdir "V:/CD/EIE/projects/LINAC_UPGRADE/MKSU/MKSUII/chassis/xilinx/mksuii_x/xst"
+elaborate
+-ifn BCDConv.prj
+-ifmt mixed

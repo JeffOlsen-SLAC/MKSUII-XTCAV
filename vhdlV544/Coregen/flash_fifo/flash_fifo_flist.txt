@@ -1,0 +1,15 @@
+# Output products list for <flash_fifo>
+_xmsgs\pn_parser.xmsgs
+fifo_generator_ug175.pdf
+flash_fifo.asy
+flash_fifo.gise
+flash_fifo.ngc
+flash_fifo.v
+flash_fifo.veo
+flash_fifo.vhd
+flash_fifo.vho
+flash_fifo.xco
+flash_fifo.xise
+flash_fifo_flist.txt
+flash_fifo_readme.txt
+flash_fifo_xmdf.tcl

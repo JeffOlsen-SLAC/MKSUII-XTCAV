@@ -1,0 +1,15 @@
+# Output products list for <subu16u16>
+_xmsgs\pn_parser.xmsgs
+subu16u16.asy
+subu16u16.gise
+subu16u16.ngc
+subu16u16.sym
+subu16u16.v
+subu16u16.veo
+subu16u16.vhd
+subu16u16.vho
+subu16u16.xco
+subu16u16.xise
+subu16u16_flist.txt
+subu16u16_readme.txt
+subu16u16_xmdf.tcl

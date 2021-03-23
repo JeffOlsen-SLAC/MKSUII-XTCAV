@@ -1,0 +1,13 @@
+
+
+wave add  -radix hex -wcfg t.t /mksuii_x/u_fp_In/u_SW_LOCAL
+isim force add n_brd_rst 0 -value 1 -time 100ns
+isim force add {/mksuii_x/mgtclk1_n} 1 -radix bin -value 0 -radix bin -time 4 ns -repeat 8 ns 
+isim force add {/mksuii_x/mgtclk1_p} 0 -radix bin -value 1 -radix bin -time 4 ns -repeat 8 ns 
+
+isim force add sw_Local 0
+
+run 1us
+
+isim force add sw_Local 1
+run 1us

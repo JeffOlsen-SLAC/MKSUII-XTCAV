@@ -1,0 +1,11 @@
+# PROMGEN: Xilinx Prom Generator P.20131013
+# Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.20131013
+DATE             3/23/2021 - 17:23
+SOURCE          /home/ise/XilinxShare/XTCAV/xilinx/mksuii_x/MKSUII_XTCAV_V550.mcs
+DEVICE          8192K
+DATA_WIDTH      16
+FILL_DATA       0xFF
+SIGNATURE       0x6EADA69E
+START_ADDRESS   0x00000000 END_ADDRESS 0x0011DFBF DIRECTION_UP   "/home/ise/XilinxShare/XTCAV/xilinx/mksuii_x/mksuii_x.bit" 5vlx30tff665

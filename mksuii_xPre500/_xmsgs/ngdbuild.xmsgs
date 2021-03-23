@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">u_Glink/Clk125_o</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_u_Glink_Clk125_o</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">u_clkMux/PLL_ADV_INST</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u_clkMux_CLKOUT0_BUF = PERIOD &quot;u_clkMux_CLKOUT0_BUF&quot; TS_u_Glink_Clk125_o HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">MGTCLK1_n</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_MGTCLK1_n</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">u_clkMux/PLL_ADV_INST</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u_clkMux_CLKOUT0_BUF_0 = PERIOD &quot;u_clkMux_CLKOUT0_BUF_0&quot; TS_MGTCLK1_n HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">MGTCLK1_p</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_MGTCLK1_p</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">u_clkMux/PLL_ADV_INST</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u_clkMux_CLKOUT0_BUF_1 = PERIOD &quot;u_clkMux_CLKOUT0_BUF_1&quot; TS_MGTCLK1_p HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">CLK119MHZ_IN_n</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_CLK119MHZ_IN_n</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">u_clkMux/PLL_ADV_INST</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u_clkMux_CLKOUT0_BUF_2 = PERIOD &quot;u_clkMux_CLKOUT0_BUF_2&quot; TS_CLK119MHZ_IN_n HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">CLK119MHZ_IN_p</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_CLK119MHZ_IN_p</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">u_clkMux/PLL_ADV_INST</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u_clkMux_CLKOUT0_BUF_3 = PERIOD &quot;u_clkMux_CLKOUT0_BUF_3&quot; TS_CLK119MHZ_IN_p HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">FADC_DATA_CLK_N</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_FADC_DATA_CLK_N</arg>&apos;, was traced into <arg fmt="%s" index="4">DCM_ADV</arg> instance <arg fmt="%s" index="5">u_FastADC/u_ad9228/DataClkibufds/DCM_ADV_INST</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">DCM_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLK270</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u_FastADC_u_ad9228_DataClkibufds_CLK270_BUF = PERIOD &quot;u_FastADC_u_ad9228_DataClkibufds_CLK270_BUF&quot; TS_FADC_DATA_CLK_N PHASE 2 ns HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">FADC_DATA_CLK_P</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_FADC_DATA_CLK_P</arg>&apos;, was traced into <arg fmt="%s" index="4">DCM_ADV</arg> instance <arg fmt="%s" index="5">u_FastADC/u_ad9228/DataClkibufds/DCM_ADV_INST</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">DCM_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLK270</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_u_FastADC_u_ad9228_DataClkibufds_CLK270_BUF_0 = PERIOD &quot;u_FastADC_u_ad9228_DataClkibufds_CLK270_BUF_0&quot; TS_FADC_DATA_CLK_P PHASE 2 ns HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1440" delta="new" >User specified non-default attribute value (<arg fmt="%s" index="1">8.4030000000000005</arg>) was detected for the <arg fmt="%s" index="2">CLKIN1_PERIOD</arg> attribute on <arg fmt="%s" index="3">PLL</arg> &quot;<arg fmt="%s" index="4">u_clkMux/PLL_ADV_INST</arg>&quot;.  This does not match the PERIOD constraint value (<arg fmt="%s" index="5">125 MHz.</arg>).  The uncertainty calculation will use the PERIOD constraint value.  This could result in incorrect uncertainty calculated for <arg fmt="%s" index="6">PLL</arg> output clocks.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1212" delta="new" >User specified non-default attribute value (<arg fmt="%s" index="1">2.8010000000000002</arg>) was detected for the <arg fmt="%s" index="2">CLKIN_PERIOD</arg> attribute on <arg fmt="%s" index="3">DCM</arg> &quot;<arg fmt="%s" index="4">u_FastADC/u_ad9228/DataClkibufds/DCM_ADV_INST</arg>&quot;.  This does not match the PERIOD constraint value (<arg fmt="%s" index="5">375 MHz.</arg>).  The uncertainty calculation will use the non-default attribute value.  This could result in incorrect uncertainty calculated for <arg fmt="%s" index="6">DCM</arg> output clocks.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1212" delta="new" >User specified non-default attribute value (<arg fmt="%s" index="1">2.8010000000000002</arg>) was detected for the <arg fmt="%s" index="2">CLKIN_PERIOD</arg> attribute on <arg fmt="%s" index="3">DCM</arg> &quot;<arg fmt="%s" index="4">u_FastADC/u_ad9228/DataClkibufds/DCM_ADV_INST</arg>&quot;.  This does not match the PERIOD constraint value (<arg fmt="%s" index="5">375 MHz.</arg>).  The uncertainty calculation will use the non-default attribute value.  This could result in incorrect uncertainty calculated for <arg fmt="%s" index="6">DCM</arg> output clocks.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="new" >Attribute &quot;<arg fmt="%s" index="1">SIM_DEVICE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">u_Sysmon/u_SysMon/SYSMON_INST</arg>&quot; of type &quot;<arg fmt="%s" index="3">SYSMON</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="486" delta="new" >Attribute &quot;<arg fmt="%s" index="1">INIT_FILE</arg>&quot; is not allowed on symbol &quot;<arg fmt="%s" index="2">blk00000666</arg>&quot; of type &quot;<arg fmt="%s" index="3">RAMB16</arg>&quot;.  This attribute will be ignored.
+</msg>
+
+</messages>
+

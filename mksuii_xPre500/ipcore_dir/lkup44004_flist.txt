@@ -1,0 +1,17 @@
+# Output products list for <lkup44004>
+_xmsgs\pn_parser.xmsgs
+blk_mem_gen_ds512.pdf
+blk_mem_gen_readme.txt
+lkup44004.asy
+lkup44004.gise
+lkup44004.mif
+lkup44004.ngc
+lkup44004.sym
+lkup44004.v
+lkup44004.veo
+lkup44004.vhd
+lkup44004.vho
+lkup44004.xco
+lkup44004.xise
+lkup44004_flist.txt
+lkup44004_xmdf.tcl

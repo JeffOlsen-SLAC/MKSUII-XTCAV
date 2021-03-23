@@ -1,0 +1,17 @@
+# Output products list for <Acc12x20>
+Acc12x20.asy
+Acc12x20.gise
+Acc12x20.ngc
+Acc12x20.sym
+Acc12x20.vhd
+Acc12x20.vho
+Acc12x20.xco
+Acc12x20.xise
+Acc12x20\doc\c_accum_v11_0_vinfo.html
+Acc12x20\doc\ds213_accum.pdf
+Acc12x20_flist.txt
+Acc12x20_readme.txt
+Acc12x20_xmdf.tcl
+_xmsgs\pn_parser.xmsgs
+core_resources.txt
+gui_latency.txt

@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator O.61xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o V:\CD\EIE\projects\XTCAV\MKSUII\chassis\xilinx\mksuii_x//192-168-00-01_xV43 -s 65536 -u 00000000 "\\slac\my storage\groups\CD\EIE\projects\XTCAV\MKSUII\chassis\xilinx\mksuii_x\mksuii_x.bit" -bpi_dc parallel -data_width 16 
+
+PROM \\slac\my storage\groups\CD\EIE\projects\XTCAV\MKSUII\chassis\xilinx\mksuii_x\192-168-00-01_xV43.prm map: Wed Jan 16 08:59:30 2013
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          65536K
+PROM start    0000:0000
+PROM end      03ff:ffff
+PROM checksum eb3b80c0
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0011:dfbf     Jan 16 08:58:52 2013 //slac/my storage/groups/CD/EIE/projects/XTCAV/MKSUII/chassis/xilinx/mksuii_x/mksuii_x.bit

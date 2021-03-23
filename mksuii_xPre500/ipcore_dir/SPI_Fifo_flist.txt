@@ -1,0 +1,14 @@
+# Output products list for <SPI_Fifo>
+SPI_Fifo.asy
+SPI_Fifo.gise
+SPI_Fifo.ngc
+SPI_Fifo.sym
+SPI_Fifo.vhd
+SPI_Fifo.vho
+SPI_Fifo.xco
+SPI_Fifo.xise
+SPI_Fifo_flist.txt
+SPI_Fifo_xmdf.tcl
+_xmsgs\pn_parser.xmsgs
+fifo_generator_readme.txt
+fifo_generator_ug175.pdf

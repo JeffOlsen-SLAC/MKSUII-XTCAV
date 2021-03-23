@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o /home/ise/XilinxShare/XTCAV/xilinx/mksuii_x//MKSUII_XTCAV_V550 -s 8192 -u 00000000 /home/ise/XilinxShare/XTCAV/xilinx/mksuii_x/mksuii_x.bit -bpi_dc parallel -data_width 16 
+
+PROM /home/ise/XilinxShare/XTCAV/xilinx/mksuii_x/MKSUII_XTCAV_V550.prm map: Tue Mar 23 17:23:49 2021
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          8192K
+PROM start    0000:0000
+PROM end      007f:ffff
+PROM checksum 6eada69e
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0011:dfbf     Mar 22 17:33:33 2021 /home/ise/XilinxShare/XTCAV/xilinx/mksuii_x/mksuii_x.bit

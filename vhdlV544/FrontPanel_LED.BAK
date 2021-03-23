@@ -1,0 +1,33 @@
+-----------------------------------------------------------------
+--                                                             --
+-----------------------------------------------------------------
+--
+--	FrontPanel_LED - 
+--
+--	Copyright(c) SLAC 2000
+--
+--	Author: JEFF OLSEN
+--	Created on: 3/9/2011 2:32:34 PM
+--	Last change: JO  3/9/2011 2:32:34 PM
+--
+library IEEE;
+use IEEE.std_logic_1164.ALL;
+use IEEE.std_logic_ARITH.ALL;
+use IEEE.std_logic_UNSIGNED.ALL;
+
+---- Uncomment the following library declaration if instantiating
+---- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+
+entity FrontPanel_LED is
+Port (
+	Clock 		: in std_logic;
+	Reset 		: in std_logic;
+
+	Configured 	: in std_logic;
+	LED_Test		: in std_logic;
+	
+
+

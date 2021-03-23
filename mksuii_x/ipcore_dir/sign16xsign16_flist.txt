@@ -1,0 +1,15 @@
+# Output products list for <sign16xsign16>
+_xmsgs\pn_parser.xmsgs
+sign16xsign16.asy
+sign16xsign16.gise
+sign16xsign16.ngc
+sign16xsign16.sym
+sign16xsign16.vhd
+sign16xsign16.vho
+sign16xsign16.xco
+sign16xsign16.xise
+sign16xsign16\doc\mult_gen_ds255.pdf
+sign16xsign16\doc\mult_gen_v11_2_vinfo.html
+sign16xsign16_flist.txt
+sign16xsign16_readme.txt
+sign16xsign16_xmdf.tcl
